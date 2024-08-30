@@ -8,5 +8,12 @@ function Signup({ onSignup }) {
     const [password, setPassword] = useState('');
     const [confirmPassword, setConfirmPassword] = useState('');
 
-    const handleSub,
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        if (password !== confirmPassword) {
+            alert("Passwords don't match!");
+            return;
+        }
+        onSignup(); //Perfom Signup here
+    }
 }
