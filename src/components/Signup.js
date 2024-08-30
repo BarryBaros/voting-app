@@ -42,6 +42,15 @@ function Signup({ onSignup }) {
                 onChange={(e) => setYearOfBirth(e.target.value)}
                 required
                 />
+                <label>Id Number</label>
+                <input
+                type="numbers"
+                value={idNumber}
+                onChange={(e) => setidNumber(e.target.value)}
+                required
+                />
+
+
                 <label>Password:</label>
                 <input
                 type="passwor"
