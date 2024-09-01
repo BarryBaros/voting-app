@@ -19,54 +19,47 @@ function Signup({ onSignup }) {
 
     return (
         <div className="auth-container">
+            <h1>MY VOTE - MY VOICE</h1>
+            <p className="tag">MAKE YOUR VOICE HEARD</p>
+            <div className=" signup-container">
             <h2>Sign-up</h2>
             <form onSubmit={handleSubmit}>
-                <label>First Name:</label>
-                <input 
-                type="text"
-                value={firstName}
-                onChange={(e) => setFirstName(e.target.value)}
-                required
-                />
-                <label>Last Name:</label>
-                <input
-                type="text"
-                value={lastName}
-                onChange={(e) => setLastName(e.target.value)}
-                required
-                />
-                <label>Year of Birth</label>
-                <input
-                type="text"
-                value={yearOfBirth}
-                onChange={(e) => setYearOfBirth(e.target.value)}
-                required
-                />
-                <label>Id Number</label>
-                <input
-                type="numbers"
-                value={idNumber}
-                onChange={(e) => setidNumber(e.target.value)}
-                required
-                />
+                <div className="form-row">
+                    <div className="form-group">
+                        <label>First Name:</label>
+                        <input type="text" placeholder="Enter First Name" required/>
+                    </div>
+                    
+                    <div className="form-group">
+                        <label>Last Name:</label>
+                        <input type="text" placeholder="Enter your Last Name" required/>
+                        </div>
+                </div>
+                
+                <div className="form-row">
+                    <div className="form-group">
+                        <label>ID Number:</label>
+                        <input type="text" placeholder="Enter your ID Number" required/>                    </div>
+                <div className="form-group">
+                    <label>Year of Birth:</label>
+                    <input type="date" required/>
+                </div>
+                </div>
 
+                <div className="form-row">
+                    <div className="form-group">
+                        <label>Password:</label>
+                        <input type="password" placeholder="Enter Password" required/>
+                    </div>
+                    <div className="form-group">
+                        <label>Confirm Password:</label>
+                        <input type="password" placeholder="Re-enter password" required/>
+                    </div>
+                </div>
 
-                <label>Password:</label>
-                <input
-                type="passwor"
-                value={password}
-                onChange={(e) => setPassword(e.target.value)}
-                required
-                />
-                <label>Confirm Password:</label>
-                <input
-                type="password"
-                value={confirmPassword}
-                onChange={(e) => setConfirmPassword(e.target.value)}
-                required
-                />
                 <button type="submit">Submit</button>
             </form>
+            </div>
         </div>
     );
 }
