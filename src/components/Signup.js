@@ -39,7 +39,8 @@ function Signup({ onSignup }) {
                 <div className="form-row">
                     <div className="form-group">
                         <label>ID Number:</label>
-                        <input type="text" placeholder="Enter your ID Number" required/>                    </div>
+                        <input type="number" placeholder="Enter your ID Number" required/>
+                    </div>
                 <div className="form-group">
                     <label>Year of Birth:</label>
                     <input type="date" required/>

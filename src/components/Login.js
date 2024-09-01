@@ -18,7 +18,7 @@ function Login({ onLogin }) {
                 <div className="input-container">
                     <label>ID Number:</label>
                     <input
-                    type="text"
+                    type="number"
                     placeholder="Eneter ID Number"
                     value={idNumber}
                     onChange={(e) => setidNumber(e.target.value)}
@@ -36,7 +36,7 @@ function Login({ onLogin }) {
                     />
                 </div>
 
-                <button type="submit">Submit:</button>
+                <button type="submit">Submit</button>
             </form>
             <p>Don't have an account? <span onClick={onLogin}>Register</span></p>
             </div>

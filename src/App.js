@@ -13,7 +13,7 @@ function App() {
 
     const handleSignup = () => {
         setIsRegistering(false);
-        handleLogin();
+        setIsLoggedIn(true);
     };
 
     return (
@@ -28,8 +28,14 @@ function App() {
                 <div>
                     <h2>Welcome to the Voting App!</h2>
 
-                    {/* Home component with candidate list goes here */}
+                    <button className="welcome" onClick={() => {
+                        setIsRegistering(false);
+                        setIsLoggedIn(false);
+                    }}>
+                        Go to Login
+                    </button>
 
+                    {/* Home component with candidate list goes here */}
                 </div>
             )}
         </div>

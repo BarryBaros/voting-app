@@ -15,31 +15,6 @@ body {
     border-radius: 10px;
 }
 
-.signup-container {
-    margin-top: 20px;
-}
-
-.form-row {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 15px;
-}
-
-.form-group {
-    width: 48%;
-}
-
-.auth-container h1{
-    margin-bottom: 5px;
-    font-size: 36px;
-}
-
-.auth-container .tag {
-    margin-top: 5px;
-    font-size: 18px;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    margin-bottom: 30px;
-}
 
 h2 {
     margin-bottom: 20px;
@@ -58,6 +33,33 @@ form {
     flex-wrap: wrap;
     justify-content: space-between;
     margin-bottom: 20px;
+}
+
+.signup-container {
+    margin-top: 20px;
+}
+
+.form-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+    width: 100%;
+}
+
+.form-group {
+    width: 48%;
+}
+
+.auth-container h1{
+    margin-bottom: 5px;
+    font-size: 36px;
+}
+
+.auth-container .tag {
+    margin-top: 5px;
+    font-size: 18px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin-bottom: 30px;
 }
 
 label {
@@ -91,7 +93,14 @@ button {
     border-radius: 5px;
     cursor: pointer;
     margin: 0 auto;
-    
+    margin-top: 20px;
+    display: block;
+}
+
+.welcome {
+    margin-top: 10px;
+    display: block;
+    width: 150px;
 }
 
 button:hover {
