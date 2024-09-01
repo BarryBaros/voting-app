@@ -1,20 +1,27 @@
 body {
     font-family: Arial, Helvetica, sans-serif;
-    background-color: #333;
+    background-color: #a7a3a3;
     margin: 0;
     padding: 0;
-    color:#E5B80B;
     text-align: center;
 }
 
-.auth-container {
+.auth-container-1 {
     width: 700px;
     margin: 100px auto;
     background: black;
     padding: 20px;
     border-radius: 10px;
+    color:#E5B80B;
 }
 
+.auth-container-2 {
+    width: 700px;
+    margin: 100px auto;
+    background: #E5B80B;
+    padding: 20px;
+    border-radius: 10px;
+}
 
 h2 {
     margin-bottom: 20px;
@@ -26,6 +33,10 @@ h2 {
     background-color: black;
     outline: 2px solid #E5B80B;
     outline-offset: 5px;
+}
+
+.signup {
+    color: #E5B80B;
 }
 
 form {
@@ -70,6 +81,10 @@ label {
     color: #E5B80B;
 }
 
+.sign {
+    color: black;
+}
+
 .input-container {
     width: 48%;
 }
@@ -95,6 +110,16 @@ button {
     margin: 0 auto;
     margin-top: 20px;
     display: block;
+}
+
+.submit-2 {
+    background-color: black;
+    color: #E5B80B;
+}
+
+.submit-2:hover {
+    color: black;
+    background-color: #9a7a05;
 }
 
 .welcome {

@@ -10,10 +10,10 @@ function Login({ onLogin }) {
     };
 
     return (
-        <div className="auth-container">
+        <div className="auth-container-1">
             <h1>MY VOTE - MY VOICE</h1>
             <p className="tag">MAKE YOUR VOICE HEARD</p>
-            <h2>Login</h2>
+            <h2 >Login</h2>
             <form onSubmit={handleSubmit}>
                 <div className="input-container">
                     <label>ID Number:</label>
@@ -38,6 +38,7 @@ function Login({ onLogin }) {
 
                 <button type="submit">Submit</button>
             </form>
+            <p>Login as <span onClick={onLogin} >Admin</span></p>
             <p>Don't have an account? <span onClick={onLogin}>Register</span></p>
             </div>
     );
