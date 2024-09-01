@@ -11,7 +11,7 @@ function AdminLogin({ onAdminLogin }) {
     };
 
     return (
-        <div className="auth-container">
+        <div className="auth-container-1">
             <h2>Admin Login</h2>
             <form onSubmit={handleSubmit}>
                 <div className="input-container">
