@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Login from "./components/Login";
 import Signup from "./components/Signup";
 import AdminLogin from "./components/AdminLogin";
@@ -28,34 +28,29 @@ function App() {
     return (
         <Router>
             <div className="App">
-                <switch>
-                    <Route exact path="/">
-                    {!isLoggedIn ? (
-                        isRegistering? (
-                            <Signup onSignup={handleSignup} />
-                        ): (
-                            <Login onLogin={handleLogin} />
+                <Routes>
+                    <Route exact path="/" element={
+                        !isLoggedIn ? (
+                            isRegistering ? (
+                                <Signup onSignup={handleSignup} />
+                            ) : (
+                                <Login onLogin={handleLogin} />
+                            )
+                        ) : (
+                            <div>
+                                <h2>Hi, Welcome!</h2>
+                                <button className="welcome" onClick={() => {
+                                    setIsRegistering(false);
+                                    setIsLoggedIn(false);
+                                }}>
+                                    Back to Login
+                                </button>
+                                {/* Home component with candidate list goes here */}
+                            </div>
                         )
-
-                    ) : (
-                        <div>
-                            <h2>Hi, Welcome!</h2>
-                            <button className="welcome" onClick={() => {
-                                setIsRegistering(false);
-                                setIsLoggedIn(false);
-                            }}>
-                                Back to Login
-                            </button>
-                            
-                            {/*Home:*/}
-                        </div>
-                    )}
-                    </Route>
-
-                    <Route path="/admin">
-                    <AdminLogin onAdminLogin={handleIsAdmin} />
-                    </Route>
-                </switch>
+                    } />
+                    <Route path="/admin" element={<AdminLogin onAdminLogin={handleIsAdmin} />} />
+                </Routes>
             </div>
         </Router>
     );

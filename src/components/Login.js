@@ -1,4 +1,5 @@
 import React, {useState} from "react";
+import { Link } from "react-router-dom";
 
 function Login({ onLogin }) {
     const [idNumber, setidNumber] = useState('');
@@ -38,7 +39,9 @@ function Login({ onLogin }) {
 
                 <button type="submit">Submit</button>
             </form>
-            <p>Login as <span onClick={onLogin} >Admin</span></p>
+
+             {/* Link to Admin Login  */}             
+            <p>Login as <Link to="/admin">Admin</Link></p>
             <p>Don't have an account? <span onClick={onLogin}>Register</span></p>
             </div>
     );
