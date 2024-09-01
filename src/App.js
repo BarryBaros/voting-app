@@ -1,11 +1,14 @@
 import React, { useState } from "react";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Login from "./components/Login";
 import Signup from "./components/Signup";
+import AdminLogin from "./components/AdminLogin";
 import './styles.css';
 
 function App() {
     const [isLoggedIn, setIsLoggedIn] = useState(false);
     const [isRegistering, setIsRegistering] = useState(false);
+    const [isAdmin, setIsAdmin] = useState(false);
 
     const handleLogin = () => {
         setIsLoggedIn(true);
@@ -16,29 +19,45 @@ function App() {
         setIsLoggedIn(true);
     };
 
+    const handleIsAdmin = () => {
+        setIsAdmin(true);
+        setIsLoggedIn(true);
+        setIsRegistering(false);
+    };
+
     return (
-        <div className="App">
-            {!isLoggedIn ? (
-                isRegistering ? (
-                    <Signup onSignup={handleSignup} />
-                ) : (
-                    <Login onLogin={() => setIsRegistering(true)} />
-                )
-            ) : (
-                <div>
-                    <h2>Welcome to the Voting App!</h2>
+        <Router>
+            <div className="App">
+                <switch>
+                    <Route exact path="/">
+                    {!isLoggedIn ? (
+                        isRegistering? (
+                            <Signup onSignup={handleSignup} />
+                        ): (
+                            <Login onLogin={handleLogin} />
+                        )
 
-                    <button className="welcome" onClick={() => {
-                        setIsRegistering(false);
-                        setIsLoggedIn(false);
-                    }}>
-                        Go to Login
-                    </button>
+                    ) : (
+                        <div>
+                            <h2>Hi, Welcome!</h2>
+                            <button className="welcome" onClick={() => {
+                                setIsRegistering(false);
+                                setIsLoggedIn(false);
+                            }}>
+                                Back to Login
+                            </button>
+                            
+                            {/*Home:*/}
+                        </div>
+                    )}
+                    </Route>
 
-                    {/* Home component with candidate list goes here */}
-                </div>
-            )}
-        </div>
+                    <Route path="/admin">
+                    <AdminLogin onAdminLogin={handleIsAdmin} />
+                    </Route>
+                </switch>
+            </div>
+        </Router>
     );
 }
 
