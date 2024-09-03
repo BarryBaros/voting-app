@@ -14,7 +14,7 @@ function Login({ onLogin }) {
         <div className="auth-container-1">
             <h1>MY VOTE - MY VOICE</h1>
             <p className="tag">MAKE YOUR VOICE HEARD</p>
-            <nav className="navbar">Home:</nav>
+            
             <h2>Login</h2>
             <form onSubmit={handleSubmit}>
                 <div className="input-container">
