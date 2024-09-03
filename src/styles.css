@@ -15,12 +15,12 @@ body {
     color:#E5B80B;
 }
 
-.auth-container-2 {
-    width: 700px;
-    margin: 100px auto;
-    background: #E5B80B;
-    padding: 20px;
-    border-radius: 10px;
+.auth-container {
+    width: 700px !important;
+    margin: 100px auto !important;
+    background: #E5B80B !important;
+    padding: 20px !important;
+    border-radius: 10px !important;
 }
 
 h2 {
@@ -61,7 +61,7 @@ form {
     width: 48%;
 }
 
-.auth-container h1{
+.auth-container-2 h1{
     margin-bottom: 5px;
     font-size: 36px;
 }
@@ -140,4 +140,3 @@ span {
 span:hover {
     color: #E5B80B;
 }
-
