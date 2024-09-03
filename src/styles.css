@@ -15,7 +15,7 @@ body {
     color:#E5B80B;
 }
 
-.auth-container {
+.auth-container-2 {
     width: 700px !important;
     margin: 100px auto !important;
     background: #E5B80B !important;
@@ -46,7 +46,7 @@ form {
     margin-bottom: 20px;
 }
 
-.signup-container {
+.auth-container-2 {
     margin-top: 20px;
 }
 
@@ -66,7 +66,7 @@ form {
     font-size: 36px;
 }
 
-.auth-container .tag {
+.tag {
     margin-top: 5px;
     font-size: 18px;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;

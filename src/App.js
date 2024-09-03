@@ -15,7 +15,7 @@ function App() {
     };
 
     const handleSignup = () => {
-        setIsRegistering(false);
+        setIsRegistering(true);
         setIsLoggedIn(true);
     };
 
