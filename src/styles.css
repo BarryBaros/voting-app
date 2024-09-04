@@ -15,7 +15,7 @@ body {
     color:#E5B80B;
 }
 
-.auth-container-2 {
+.auth-container {
     width: 700px !important;
     margin: 100px auto !important;
     background: #E5B80B !important;
@@ -28,16 +28,23 @@ h2 {
     font-size: 20px;
     border-radius: 5px;
     padding: 2px 20px;
-    text-align: center;
     display: inline-block;
-    background-color: black;
     outline: 2px solid #E5B80B;
+}
+
+.sign {
+    margin-bottom: 20px;
+    font-size: 20px;
+    border-radius: 5px;
+    padding: 2px 20px;
+    display: inline-block;
+    outline: 2px solid black;
     outline-offset: 5px;
 }
 
-.signup {
+/* .signup {
     color: #E5B80B;
-}
+} */
 
 form {
     display: flex;
@@ -46,22 +53,22 @@ form {
     margin-bottom: 20px;
 }
 
-.auth-container-2 {
+/* .auth-container {
     margin-top: 20px;
-}
+} */
 
-.form-row {
+/* .form-row {
     display: flex;
     justify-content: space-between;
     margin-bottom: 15px;
     width: 100%;
-}
+} */
 
-.form-group {
+/* .form-group {
     width: 48%;
-}
+} */
 
-.auth-container-2 h1{
+ h1{
     margin-bottom: 5px;
     font-size: 36px;
 }
@@ -69,21 +76,27 @@ form {
 .tag {
     margin-top: 5px;
     font-size: 18px;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     margin-bottom: 30px;
 }
 
 label {
     display: block;
-    margin-bottom: 5px;
     text-align: left;
     width: 100%;
     color: #E5B80B;
 }
 
-.sign {
+.label {
+    display: block;
+    text-align: left;
+    width: 100%;
     color: black;
 }
+
+/* .sign {
+    color: black;
+} */
 
 .input-container {
     width: 48%;
@@ -96,7 +109,7 @@ input {
     border-radius: 5px;
     border: 2px solid #E5B80B;
     box-sizing: border-box;
-    background-color: #ece5e5;
+    background-color: #dbd7d7;
 }
 
 button {
@@ -112,14 +125,14 @@ button {
     display: block;
 }
 
-.submit-2 {
+.sign_up {
     background-color: black;
     color: #E5B80B;
 }
 
-.submit-2:hover {
+.sign_up:hover {
     color: black;
-    background-color: #9a7a05;
+    background-color: #a58505;
 }
 
 .welcome {
@@ -140,3 +153,4 @@ span {
 span:hover {
     color: #E5B80B;
 }
+
