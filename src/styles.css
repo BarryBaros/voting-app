@@ -145,12 +145,12 @@ button:hover {
     background-color: #d1a500;
 }
 
-span {
+.link {
     color: white;
     cursor: pointer;
 }
 
-span:hover {
+.link:hover {
     color: #E5B80B;
 }
 

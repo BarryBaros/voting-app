@@ -46,7 +46,7 @@ function Login({ onLogin }) {
             </form>
 
             {/* Link to Admin Login */}
-            <p>Login as <Link to="/admin">Admin</Link></p>
+            <p className="link">Login as <Link to="/admin">Admin</Link></p>
 
             {/* Link to Signup */}
             <p>Don't have an account? <Link to="/signup">Sign Up</Link></p>
