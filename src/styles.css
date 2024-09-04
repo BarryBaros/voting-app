@@ -42,10 +42,6 @@ h2 {
     outline-offset: 5px;
 }
 
-/* .signup {
-    color: #E5B80B;
-} */
-
 form {
     display: flex;
     flex-wrap: wrap;
@@ -53,32 +49,22 @@ form {
     margin-bottom: 20px;
 }
 
-/* .auth-container {
-    margin-top: 20px;
-} */
-
-/* .form-row {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 15px;
-    width: 100%;
-} */
-
-/* .form-group {
-    width: 48%;
-} */
-
  h1{
     margin-bottom: 5px;
-    font-size: 36px;
+    font-size: 20px;
+    text-align: left;
+    margin-left: 20px;
 }
 
 .tag {
     margin-top: 5px;
-    font-size: 18px;
+    font-size: 12px;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     margin-bottom: 30px;
+    text-align: left;
+    margin-left: 20px;
 }
+
 
 label {
     display: block;
@@ -93,10 +79,6 @@ label {
     width: 100%;
     color: black;
 }
-
-/* .sign {
-    color: black;
-} */
 
 .input-container {
     width: 48%;
