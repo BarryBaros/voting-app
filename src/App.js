@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import HomePage from "./components/HomePage"
 import Login from "./components/Login";
 import Signup from "./components/Signup";
 import AdminLogin from "./components/AdminLogin";
@@ -49,8 +50,10 @@ function App() {
                             </div>
                         )
                     } />
+                    <Route path="/candidates" element={<HomePage />} />
                     <Route path="/admin" element={<AdminLogin onAdminLogin={handleIsAdmin} />} />
                 </Routes>
+               
             </div>
         </Router>
     );

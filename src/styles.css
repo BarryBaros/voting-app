@@ -141,3 +141,136 @@ span:hover {
     color: #E5B80B;
 }
 
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* background-color: black ; */
+}
+
+.navbar-title{
+    font-size:24px;
+    font-family:sans-serif;
+    font-weight: bold;
+    color:#E5B80B;
+    }
+   
+.navbar-links a{
+    text-decoration: none;
+    font-size: 24px;
+    color: #E5B80B;
+    margin-left:20px;
+}   
+
+.navbar-links a:hover{
+    color:#8b4513;
+}
+
+.candidates-page {
+    padding: 20px;
+  }
+  
+  .candidates-section {
+    margin-bottom: 40px;
+  }
+  
+  .candidates-section h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 24px;
+    color:white;
+  }
+  
+  .candidates-container {
+    display: flex;
+    overflow-x: scroll;
+    gap: 20px;
+    padding: 10px;
+  }
+  
+  .candidate-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    width: 300px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    background-color: #f9f9f9;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .candidate-info {
+    text-align: center;
+  }
+  
+  .candidate-info h3 {
+    font-size: 20px;
+    margin-bottom: 5px;
+  }
+  
+  .candidate-info p {
+    font-size: 16px;
+    color: #555;
+  }
+  
+  .candidate-image img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 20px;
+  }
+  
+  .vote-button {
+    font-size: 16px;
+    width:56px;
+     padding: 10px 15px; 
+    /* box-sizing: border-box;     */
+    background-color: #000000;
+    color: #E5B80B;
+    border: none;
+    border-radius: 17px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .vote-button:hover {
+    color: black;
+    background-color: #9a7a05;
+    
+  }
+  
+  .footer {
+    padding: 20px;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    margin-top: 40px;
+  }
+  
+  .social-media-links a {
+    color: #fff;
+    margin: 0 10px;
+    text-decoration: none;
+  }
+  
+  .admin-login a {
+    color: #007bff;
+    text-decoration: none;
+    margin-top: 10px;
+    display: inline-block;
+  }
+  
+  .admin-login a:hover {
+    text-decoration: underline;
+  }
+  
+  .rights-reserved p {
+    margin-top: 20px;
+    font-size: 14px;
+  }
+  
+  
+
