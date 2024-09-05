@@ -1,7 +1,8 @@
 import React from "react";
 import Navbar from "./Navbar";
-import { useEffect } from "react";
-import { useState } from "react";
+// import { FaFacebookF, FaTwitter, FaInstagram } from 'react-icons/fa';
+// import { useEffect } from "react";
+// import { useState } from "react";
 
 const elect_results = {
     presidential: [
@@ -71,8 +72,12 @@ const Results = () => {
         {Object.entries(elect_results).map(([position, candidates]) => renderTable(position, candidates))}
       </div>
     </div>
+
         </>
+        
     );
+
+    
   };
 
   export default Results;
