@@ -7,9 +7,9 @@ const Navbar = () => {
             MY VOTE MY CHOICE
         </div>
         <div className="navbar-links">
-            <a href="HOME">Home</a>
-            <a href="RESULTS">Results</a>
-            <a href="ABOUT">About</a>
+            <a href="candidates">Home</a>
+            <a href="results">Results</a>
+            <a href="about">About</a>
     
         </div>
     </nav>
