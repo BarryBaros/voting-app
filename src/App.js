@@ -5,6 +5,7 @@ import Login from './components/Login';
 import Signup from './components/Signup';
 import AdminLogin from './components/AdminLogin';
 import './styles.css';
+import Results from './components/Resultst';
 
 function App() {
     const [isLoggedIn, setIsLoggedIn] = useState(false);
@@ -46,6 +47,7 @@ function App() {
                         }
                     />
                     <Route path="/candidates" element={<HomePage />} />
+                    <Route path="/results" element={<Results />} />
                     <Route
                         path="/signup"
                         element={<Signup onSignup={handleSignup} />}
