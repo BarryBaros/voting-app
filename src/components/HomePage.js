@@ -167,6 +167,7 @@ const Section = ({ title, candidates }) => (
             <img src={candidate.image} alt={candidate.name} />
           </div>
           <button className="button">Vote</button>
+          <></>
         </div>
       ))}
     </div>
