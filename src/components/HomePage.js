@@ -6,25 +6,25 @@ const HomePage = () => {
   const presidentialCandidates = [
     {
       id: 1,
-      name: 'Candidate 1',
+      name: 'Mercy Lee',
       party: 'Party A',
       image: 'https://media.gettyimages.com/id/1385767484/photo/mature-man-leading-a-demonstration-using-a-megaphone.jpg?s=612x612&w=0&k=20&c=e1e9IKMU5m3jq71J1--HwahReURFN0wxI8x_arLK2JQ=', // Replace with actual image URL
     },
     {
       id: 2,
-      name: 'Candidate 2',
+      name: 'Raila Odinga',
       party: 'Party B',
       image: 'https://media.gettyimages.com/id/85213614/photo/rear-view-of-politician.jpg?s=612x612&w=0&k=20&c=7KvCnIMX1dFHZUtHWsoHH4Im3QrIf3FQ_hnea4N2E_w=', // Replace with actual image URL
     },
     {
       id: 1,
-      name: 'Candidate 3',
+      name: 'Harry Puttin',
       party: 'Party C',
       image: 'https://media.gettyimages.com/id/1385767484/photo/mature-man-leading-a-demonstration-using-a-megaphone.jpg?s=612x612&w=0&k=20&c=e1e9IKMU5m3jq71J1--HwahReURFN0wxI8x_arLK2JQ=', // Replace with actual image URL
     },
     {
       id: 1,
-      name: 'Candidate 4',
+      name: 'Jemma Karanja',
       party: 'Party D',
       image: 'https://media.gettyimages.com/id/1385767484/photo/mature-man-leading-a-demonstration-using-a-megaphone.jpg?s=612x612&w=0&k=20&c=e1e9IKMU5m3jq71J1--HwahReURFN0wxI8x_arLK2JQ=', // Replace with actual image URL
     },
@@ -82,8 +82,62 @@ const HomePage = () => {
       party: 'Party K',
       image: 'https://media.gettyimages.com/id/1006071592/photo/revolution-fist-raised.jpg?s=612x612&w=0&k=20&c=Q15oEzFONYs0qyt_4ggtmHIaow4ENJix9K0UslNJ-AE=', // Replace with actual image URL
     },
-    
   ];
+  
+  const mcaCandidates = [
+    {
+      id: 1,
+      name: 'MCA Candidate 1',
+      party: 'Party A',
+      image: 'https://media.gettyimages.com/id/1006071592/photo/revolution-fist-raised.jpg?s=612x612&w=0&k=20&c=Q15oEzFONYs0qyt_4ggtmHIaow4ENJix9K0UslNJ-AE=', // Replace with actual image URL
+    },
+    {
+      id: 2,
+      name: 'MCA Candidate 2',
+      party: 'Party B',
+      image: 'https://media.gettyimages.com/id/157376763/photo/politician-debating.jpg?s=612x612&w=0&k=20&c=CTtZdkqJ-43tUoIK3tM6QSbX7y2gV8pNNqYHMFCsYz8=', // Replace with actual image URL
+    },
+    {
+      id: 3,
+      name: 'MCA Candidate 3',
+      party: 'Party C',
+      image: 'https://media.gettyimages.com/id/1006071592/photo/revolution-fist-raised.jpg?s=612x612&w=0&k=20&c=Q15oEzFONYs0qyt_4ggtmHIaow4ENJix9K0UslNJ-AE=', // Replace with actual image URL
+    },
+    {
+      id: 4,
+      name: 'MCA Candidate 4',
+      party: 'Party D',
+      image: 'https://media.gettyimages.com/id/1006071592/photo/revolution-fist-raised.jpg?s=612x612&w=0&k=20&c=Q15oEzFONYs0qyt_4ggtmHIaow4ENJix9K0UslNJ-AE=', // Replace with actual image URL
+    },
+  ];
+  
+  const mpCandidates = [
+    {
+      id: 1,
+      name: 'MP Candidate 1',
+      party: 'Party X',
+      image: 'https://media.gettyimages.com/id/1006071592/photo/revolution-fist-raised.jpg?s=612x612&w=0&k=20&c=Q15oEzFONYs0qyt_4ggtmHIaow4ENJix9K0UslNJ-AE=', // Replace with actual image URL
+    },
+    {
+      id: 2,
+      name: 'MP Candidate 2',
+      party: 'Party Y',
+      image: 'https://media.gettyimages.com/id/157376763/photo/politician-debating.jpg?s=612x612&w=0&k=20&c=CTtZdkqJ-43tUoIK3tM6QSbX7y2gV8pNNqYHMFCsYz8=', // Replace with actual image URL
+    },
+    {
+      id: 3,
+      name: 'MP Candidate 3',
+      party: 'Party Z',
+      image: 'https://media.gettyimages.com/id/1006071592/photo/revolution-fist-raised.jpg?s=612x612&w=0&k=20&c=Q15oEzFONYs0qyt_4ggtmHIaow4ENJix9K0UslNJ-AE=', // Replace with actual image URL
+    },
+    {
+      id: 4,
+      name: 'MP Candidate 4',
+      party: 'Party W',
+      image: 'https://media.gettyimages.com/id/1006071592/photo/revolution-fist-raised.jpg?s=612x612&w=0&k=20&c=Q15oEzFONYs0qyt_4ggtmHIaow4ENJix9K0UslNJ-AE=', // Replace with actual image URL
+    },
+  ];
+  
 
   return (
     <div className="candidates-page">
@@ -91,9 +145,12 @@ const HomePage = () => {
       <Section title="Presidential Candidates" candidates={presidentialCandidates} />
       <Section title="Senatorial Candidates" candidates={senatorialCandidates} />
       <Section title="Gubernatorial Candidates" candidates={gubernatorialCandidates} />
+      <Section title="MP Candidates" candidates={mpCandidates} />
+      <Section title="MCA Candidates" candidates={mcaCandidates} />
       <Footer />
     </div>
   );
+   
 };
 
 const Section = ({ title, candidates }) => (
@@ -131,9 +188,7 @@ const Footer = () => (
         <FaInstagram />
       </a>
     </div>
-    <div className="admin-login">
-      <a href="#">Login as Admin</a>
-    </div>
+    
     <div className="rights-reserved">
       <p>&copy; 2024 All Rights Reserved.</p>
     </div>

@@ -11,7 +11,7 @@ const Navbar = () => {
             <a href="candidates">Home</a>
             <a href="results">Results</a>
             <a href="about">About</a>
-            <span><a href="logout">logout</a></span>
+            <span><a href="logout">Logout</a></span>
     
         </div>
     </nav>
