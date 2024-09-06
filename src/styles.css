@@ -42,13 +42,6 @@ h2 {
   outline-offset: 5px;
 }
 
-<<<<<<< HEAD
-=======
-/* .signup {
-  color: #E5B80B;
-} */
-
->>>>>>> 217c796c2266981a6cd12c92f8b5adacf747b502
 form {
   display: flex;
   flex-wrap: wrap;
@@ -56,7 +49,6 @@ form {
   margin-bottom: 20px;
 }
 
-<<<<<<< HEAD
  h1{
     margin-bottom: 5px;
     font-size: 20px;
@@ -70,8 +62,7 @@ form {
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     margin-bottom: 30px;
     text-align: left;
-    margin-left: 20px;
-=======
+      margin-left: 20px;}
 /* .auth-container {
   margin-top: 20px;
 } */
@@ -97,7 +88,6 @@ h1{
   font-size: 18px;
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
   margin-bottom: 30px;
->>>>>>> 217c796c2266981a6cd12c92f8b5adacf747b502
 }
 
 
@@ -115,13 +105,6 @@ label {
   color: black;
 }
 
-<<<<<<< HEAD
-=======
-/* .sign {
-  color: black;
-} */
-
->>>>>>> 217c796c2266981a6cd12c92f8b5adacf747b502
 .input-container {
   width: 48%;
 }
@@ -169,7 +152,6 @@ button:hover {
   background-color: #d1a500;
 }
 
-<<<<<<< HEAD
 .link {
     color: white;
     cursor: pointer;
@@ -184,8 +166,8 @@ button:hover {
     justify-content: space-between;
     align-items: center;
     background-color: black ;
-    width: 100%;
-=======
+    width: 100%;}
+
 span {
   color: white;
   cursor: pointer;
@@ -203,7 +185,6 @@ span:hover {
   font-family: 'Times New Roman', Times, serif;
   font-weight: 500;
   /*background-color: black ; */
->>>>>>> 217c796c2266981a6cd12c92f8b5adacf747b502
 }
 
 .navbar-title{
@@ -221,19 +202,17 @@ span:hover {
 }
  
 .navbar-links a{
-<<<<<<< HEAD
     text-decoration: none;
-    font-size: 20px;
+    font-size: 50px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     color: #E5B80B;
-    margin:15px;    
-=======
-  text-decoration: none;
-  font-size: 24px;
-  color: #ffda45;
-  margin-left:20px;
-  border-bottom: none;
-  transition: transform 0.3s ease, color 0.3s ease;
->>>>>>> 217c796c2266981a6cd12c92f8b5adacf747b502
+    margin:15px; 
+    text-decoration: none;
+    font-size: 24px;
+    color: #ffda45;
+    margin-left:20px;
+    border-bottom: none;
+    transition: transform 0.3s ease, color 0.3s ease;
 }   
 
 .navbar-links a:hover, .navbar-links a:focus{
@@ -327,6 +306,8 @@ color: #fefefe;
   font-size: 16px;
   width:70px;
    padding: 10px 15px; 
+
+
   /* box-sizing: border-box;     */
   background-color: #000000;
   color: #edc841;
