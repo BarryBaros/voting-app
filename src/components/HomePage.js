@@ -109,7 +109,7 @@ const Section = ({ title, candidates }) => (
           <div className="candidate-image">
             <img src={candidate.image} alt={candidate.name} />
           </div>
-          <button className="vote-button">Vote</button>
+          <button className="button">Vote</button>
         </div>
       ))}
     </div>

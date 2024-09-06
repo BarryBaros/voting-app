@@ -136,11 +136,12 @@ button:hover {
     color: #E5B80B;
 }
 
-.navbar{
+.navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    /* background-color: black ; */
+    background-color: black ;
+    width: 100%;
 }
 
 .navbar-title{
@@ -152,14 +153,15 @@ button:hover {
    
 .navbar-links a{
     text-decoration: none;
-    font-size: 24px;
+    font-size: 20px;
     color: #E5B80B;
-    margin-left:20px;
+    margin:15px;    
 }   
 
 .navbar-links a:hover{
     color:#8b4513;
 }
+
 
 .candidates-page {
     padding: 20px;
