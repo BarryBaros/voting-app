@@ -58,36 +58,15 @@ form {
 
 .tag {
     margin-top: 5px;
-    font-size: 12px;
+    font-size: 18px;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     margin-bottom: 30px;
     text-align: left;
       margin-left: 20px;}
-/* .auth-container {
-  margin-top: 20px;
-} */
-
-/* .form-row {
-  display: flex;
-  justify-content: space-between;
-  margin-bottom: 15px;
-  width: 100%;
-} */
-
-/* .form-group {
-  width: 48%;
-} */
 
 h1{
   margin-bottom: 5px;
   font-size: 36px;
-}
-
-.tag {
-  margin-top: 5px;
-  font-size: 18px;
-  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-  margin-bottom: 30px;
 }
 
 
@@ -184,7 +163,6 @@ span:hover {
   margin: 10px 15px;
   font-family: 'Times New Roman', Times, serif;
   font-weight: 500;
-  /*background-color: black ; */
 }
 
 .navbar-title{
@@ -233,12 +211,18 @@ margin-left: 40px;
 color: #fefefe;
 }
 
+.home-p {
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  margin-left: 500px;
+}
+
 
 .candidates-page {
   padding: 20px;
   background-color: #1F1D1D;
-  /* width: 100%;
-  max-width: 1200px; */
   
 }
 
@@ -295,11 +279,10 @@ color: #fefefe;
 }
 
 .candidate-image img {
-  width: 70px;
-  height: 70px;
+  width: 200px;
+  height: 200px;
   border-radius: 50%;
   object-fit: cover;
-  margin-bottom: 20px;
 }
 
 .vote-button {
@@ -348,8 +331,6 @@ color: #fefefe;
 
 
 /*RESULTS STYLING*/
-
-
 
 #election-results-container {
   padding: 20px;
@@ -412,11 +393,6 @@ color: #fefefe;
   border-radius: 50%;
 }
 
-.candidate-image {
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-}
 
 .results-table thead {
   background-color: #f4f4f4;
@@ -489,53 +465,21 @@ button[type="submit"]:hover {
   background-color: #145FA3;
 }
 
-
-/* .candidates-section h2{
-  font-size: 30px;
-  font-family: 'Times New Roman', Times, serif;
-} */
-
-/* .candidates-container {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-  justify-content: space-between;
-} */
-
-/* .candidate-card {
-  background-color: #f0f0f0;
-  border-radius: 8px;
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-  width: 180px;
-  padding: 10px;
-  text-align: center;
-  transition: transform 0.3s ease-in-out;
-} */
-
 .candidate-card:hover {
   transform: translateY(-5px);
 }
 
-/* .candidate-card img {
-  width: 100px;
-  height: 100px;
-  object-fit: cover;
-  border-radius: 8px;
-} */
+.b-vote {
+  width: fit-content;
+  padding: 5px;
+}
 
-/* .candidate-card h3 {
-  color: #333;
-  margin-top: 10px;
-  font-size: 16px;
-} */
+.success {
+  color: green;
+  font-size: large;
+}
 
-/* .candidate-card p {
-  color: #666;
-  margin-top: 5px;
-  font-size: 13px;
-} */
-
-/* .title h2{
-  color: #000000;
-
-} */
+.error {
+  color: red;
+  font-size: large;
+}

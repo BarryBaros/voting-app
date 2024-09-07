@@ -153,6 +153,12 @@ const HomePage = () => {
    
 };
 
+const handleVote = (candidateId) => {
+  console.log("Voted for candidate with id:", candidateId);
+  // Add logic to send the vote to the backend or update state
+};
+
+// define the handleVote function 
 const Section = ({ title, candidates }) => (
   <div className="candidates-section">
     <h2>{title}</h2>
@@ -166,7 +172,8 @@ const Section = ({ title, candidates }) => (
           <div className="candidate-image">
             <img src={candidate.image} alt={candidate.name} />
           </div>
-          <button className="button">Vote</button>
+          <button className="b-vote" onClick={() => handleVote(candidate.id)}>Vote</button>
+
           <></>
         </div>
       ))}
@@ -179,7 +186,7 @@ const Section = ({ title, candidates }) => (
 const Footer = () => (
   <footer className="footer">
     <div className="social-media-links">
-      <a href="#" target="_blank" rel="noopener noreferrer">
+      <a href="facebook" target="_blank" rel="https://www.facebook.com/">
         <FaFacebookF />
       </a>
       <a href="#" target="_blank" rel="noopener noreferrer">
