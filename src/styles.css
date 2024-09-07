@@ -219,6 +219,25 @@ color: #fefefe;
   margin-left: 500px;
 }
 
+.welcome-message {
+  font-size: 24px;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.7); /* Add background to make text readable */
+  padding: 20px;
+  margin-bottom: 20px;
+  z-index: 10; /* Ensure it is in front of other elements */
+  position: relative; /* Relative to the candidates section */
+}
+
+.welcome {
+  font-size: 24px;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.7); /* Add background to make text readable */
+  padding: 20px;
+  margin-bottom: 20px;
+  z-index: 10; /* Ensure it is in front of other elements */
+ 
+}
 
 .candidates-page {
   padding: 20px;
