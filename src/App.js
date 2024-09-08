@@ -7,28 +7,38 @@ import Signup from './components/Signup';
 import AdminLogin from './components/AdminLogin';
 import Results from './components/Results';
 import AdminLandingPage from './components/AdminLandingPage';
+import Navbar from './Navbar';
 
 function App() {
     const [isLoggedIn, setIsLoggedIn] = useState(false);
+    const [isAdminLoggedIn, setIsAdminLoggedIn] = useState(false);
 
     const handleLogin = () => {
         setIsLoggedIn(true); // Update login state when user logs in
     };
 
+    const handleSignup = () => {
+        // Handle signup logic here
+    };
+
     const handleAdminLogin = () => {
         console.log('Admin logged in successfully!');
-        setIsLoggedIn(true); // Example: set admin login state
+        setIsAdminLoggedIn(true); // Update admin login state
     };
 
     const handleLogout = () => {
         setIsLoggedIn(false); // Reset login state when user logs out
     };
 
+    const handleAdminLogout = () => {
+        setIsAdminLoggedIn(false); // Reset admin login state
+    };
+
     return (
         <Router>
             <div className="App">
                 {isLoggedIn && <Navbar onLogout={handleLogout} />}
-
+                
                 <Routes>
                     <Route
                         path="/"
@@ -51,9 +61,8 @@ function App() {
                     />
                     <Route path="/candidates" element={<HomePage />} />
                     <Route path="/results" element={<Results />} />
-                    <Route path="/admin-page" element={<AdminLandingPage />} />
-                    {/* <Route path="/logout"  element={<Login />} /> */}
-
+                    <Route path="/about" element={<About />} />
+                    
                     <Route
                         path="/signup"
                         element={<Signup onSignup={handleSignup} />}
@@ -62,7 +71,14 @@ function App() {
                         path="/admin"
                         element={<AdminLogin onAdminLogin={handleAdminLogin} />}
                     />
-                    <Route path="/admin-page" element={isLoggedIn ? <AdminLandingPage /> : <Navigate to="/" />} />
+                    <Route
+                        path="/admin-page"
+                        element={isAdminLoggedIn ? (
+                            <AdminLandingPage onAdminLogout={handleAdminLogout} />
+                        ) : (
+                            <Navigate to="/admin" />
+                        )}
+                    />
                 </Routes>
             </div>
         </Router>
