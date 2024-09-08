@@ -9,16 +9,11 @@ const Navbar = () => {
             MY VOTE MY CHOICE
         </div>
         <div className="navbar-links">
-<<<<<<< HEAD
-            <a href="candidates">Home</a>
-            <a href="RESULTS">Results</a>
-            <a href="ABOUT">About</a>
-=======
-            <Link to="/">Home</Link>
+            <><a href="candidates">Home</a><a href="RESULTS">Results</a><a href="ABOUT">About</a></>
+            {/* <Link to="/">Home</Link>
             <Link to="/results">Results</Link>
-            <Link to="/about">About</Link>
->>>>>>> upstream/main
-    
+            <Link to="/about">About</Link> */}
+      
         </div>
     </nav>
   );
