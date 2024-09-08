@@ -3,7 +3,8 @@ import { Link, useNavigate } from 'react-router-dom';
 
 function Signup({ onSignup }) {
     const [idNumber, setIdNumber] = useState('');
-    const [name, setName] = useState('');
+    const [firstName, setFirstName] = useState('');
+    const [lastName, setLastName] = useState('');
     const [dob, setDob] = useState('');
     const [password, setPassword] = useState('');
     const [confirmPassword, setConfirmPassword] = useState('');
@@ -20,7 +21,8 @@ function Signup({ onSignup }) {
         // Collect user data and pass it to the onSignup function
         const userData = {
             idNumber,
-            name,
+            firstName,
+            lastName,
             dob,
             password
         };
@@ -36,6 +38,28 @@ function Signup({ onSignup }) {
              
             <h2 className='sign'>Sign Up</h2>
             <form onSubmit={handleSubmit}>
+
+                <div className="input-container">
+                    <label className='label'>First Name:</label>
+                    <input
+                        type="text"
+                        placeholder="Enter First Name"
+                        value={firstName}
+                        onChange={(e) => setFirstName(e.target.value)}
+                        required
+                    />
+                </div>
+                <div className="input-container">
+                    <label className='label'>Last Name:</label>
+                    <input
+                        type="text"
+                        placeholder="Enter Last Name"
+                        value={lastName}
+                        onChange={(e) => setLastName(e.target.value)}
+                        required
+                    />
+                </div>
+
                 <div className="input-container">
                     <label className='label'>ID Number:</label>
                     <input
@@ -46,18 +70,7 @@ function Signup({ onSignup }) {
                         required
                     />
                 </div>
-
-                <div className="input-container">
-                    <label className='label'>Name:</label>
-                    <input
-                        type="text"
-                        placeholder="Enter Full Name"
-                        value={name}
-                        onChange={(e) => setName(e.target.value)}
-                        required
-                    />
-                </div>
-
+                
                 <div className="input-container">
                     <label className='label'>Date of Birth:</label>
                     <input
