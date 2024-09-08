@@ -144,8 +144,8 @@ button:hover {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: black ;
-    width: 100%;}
+    /* background-color: black ; */
+    width: 98%;}
 
 span {
   color: white;
@@ -194,7 +194,7 @@ span:hover {
 }   
 
 .navbar-links a:hover, .navbar-links a:focus{
-color: #fefefe;
+color: #000;
 border-bottom: 2px solid yellow;
 transform: scale(4.1);
 }
@@ -484,21 +484,52 @@ button[type="submit"]:hover {
   background-color: #145FA3;
 }
 
+
+/* .candidates-section h2{
+  font-size: 30px;
+  font-family: 'Times New Roman', Times, serif;
+} */
+
+/* .candidates-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: space-between;
+} */
+
+/* .candidate-card {
+  background-color: #f0f0f0;
+  border-radius: 8px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  width: 180px;
+  padding: 10px;
+  text-align: center;
+  transition: transform 0.3s ease-in-out;
+} */
+
 .candidate-card:hover {
   transform: translateY(-5px);
 }
 
-.b-vote {
-  width: fit-content;
-  padding: 5px;
-}
+.candidate-card img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 8px;
+} */
 
-.success {
-  color: green;
-  font-size: large;
-}
+.candidate-card h3 {
+  color: #333;
+  margin-top: 10px;
+  font-size: 16px;
+} */
 
-.error {
-  color: red;
-  font-size: large;
-}
+.candidate-card p {
+  color: #666;
+  margin-top: 5px;
+  font-size: 13px;
+} 
+.title h2{
+  color: #000000;
+
+} 

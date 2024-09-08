@@ -7,6 +7,7 @@ import AdminLogin from './components/AdminLogin';
 import './styles.css';
 import Results from './components/Resultst';
 import AdminLandingPage from './components/AdminLandingPage';
+import About from './components/About';
 
 function App() {
     const [isLoggedIn, setIsLoggedIn] = useState(false);
@@ -50,6 +51,7 @@ function App() {
                     <Route path="/candidates" element={<HomePage />} />
                     <Route path="/results" element={<Results />} />
                     <Route path="/admin-page" element={<AdminLandingPage />} />
+                    <Route path="/about" element={<About />} />
                     {/* <Route path="/logout"  element={<Login />} /> */}
 
                     <Route
