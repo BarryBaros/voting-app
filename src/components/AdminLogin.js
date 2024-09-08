@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 
+
 function AdminLogin({ onAdminLogin }) {
     const [idNumber, setIdNumber] = useState('');
     const [password, setPassword] = useState('');

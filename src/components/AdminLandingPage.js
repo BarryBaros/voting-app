@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
-// import Navbar from './Navbar';
+import Navbar from './Navbar';
 
-//candidate arrays
+// Predefined candidate arrays
 const presidentialCandidates = [
   {
     id: 1,
@@ -16,17 +16,30 @@ const presidentialCandidates = [
     image: 'https://media.gettyimages.com/id/85213614/photo/rear-view-of-politician.jpg?s=612x612&w=0&k=20&c=7KvCnIMX1dFHZUtHWsoHH4Im3QrIf3FQ_hnea4N2E_w='
   },
   {
-    id: 3,
-    name: 'Candidate 3',
-    party: 'JUBILEE',
-    image: 'https://media.gettyimages.com/id/1385767484/photo/mature-man-leading-a-demonstration-using-a-megaphone.jpg?s=612x612&w=0&k=20&c=e1e9IKMU5m3jq71J1--HwahReURFN0wxI8x_arLK2JQ='
+    id: 2,
+    name: 'Candidate 2',
+    party: 'WIPER',
+    image: 'https://media.gettyimages.com/id/85213614/photo/rear-view-of-politician.jpg?s=612x612&w=0&k=20&c=7KvCnIMX1dFHZUtHWsoHH4Im3QrIf3FQ_hnea4N2E_w='
   },
   {
-    id: 4,
-    name: 'Candidate 4',
-    party: 'ODM',
-    image: 'https://media.gettyimages.com/id/1385767484/photo/mature-man-leading-a-demonstration-using-a-megaphone.jpg?s=612x612&w=0&k=20&c=e1e9IKMU5m3jq71J1--HwahReURFN0wxI8x_arLK2JQ='
+    id: 2,
+    name: 'Candidate 2',
+    party: 'WIPER',
+    image: 'https://media.gettyimages.com/id/85213614/photo/rear-view-of-politician.jpg?s=612x612&w=0&k=20&c=7KvCnIMX1dFHZUtHWsoHH4Im3QrIf3FQ_hnea4N2E_w='
   },
+  {
+    id: 2,
+    name: 'Candidate 2',
+    party: 'WIPER',
+    image: 'https://media.gettyimages.com/id/85213614/photo/rear-view-of-politician.jpg?s=612x612&w=0&k=20&c=7KvCnIMX1dFHZUtHWsoHH4Im3QrIf3FQ_hnea4N2E_w='
+  },
+  {
+    id: 2,
+    name: 'Candidate 2',
+    party: 'WIPER',
+    image: 'https://media.gettyimages.com/id/85213614/photo/rear-view-of-politician.jpg?s=612x612&w=0&k=20&c=7KvCnIMX1dFHZUtHWsoHH4Im3QrIf3FQ_hnea4N2E_w='
+  },
+  
 ];
 
 const senatorialCandidates = [
@@ -37,23 +50,36 @@ const senatorialCandidates = [
     image: 'https://media.gettyimages.com/id/1345174163/photo/people-with-raised-fists-at-a-demonstration-in-the-city.jpg?s=612x612&w=0&k=20&c=O9UAMvOuvCVm6DYk_r5_VhMLPHZUHeQVr4Kxc63nZcI='
   },
   {
-    id: 2,
-    name: 'Senatorial Candidate 2',
-    party: 'ODM',
-    image: 'https://media.gettyimages.com/id/130406402/photo/politician-speaking-to-reporters.jpg?s=612x612&w=0&k=20&c=OWBq7MjmhsXraAn0BH8wBXZ66yDonJ_mOqy7tzZ1jDs='
-  },
-  {
-    id: 3,
-    name: 'Senatorial Candidate 3',
-    party: 'UDA',
+    id: 1,
+    name: 'Senatorial Candidate 1',
+    party: 'WIPER',
     image: 'https://media.gettyimages.com/id/1345174163/photo/people-with-raised-fists-at-a-demonstration-in-the-city.jpg?s=612x612&w=0&k=20&c=O9UAMvOuvCVm6DYk_r5_VhMLPHZUHeQVr4Kxc63nZcI='
   },
   {
-    id: 4,
-    name: 'Senatorial Candidate 4',
-    party: 'JUBILEE',
+    id: 1,
+    name: 'Senatorial Candidate 1',
+    party: 'WIPER',
     image: 'https://media.gettyimages.com/id/1345174163/photo/people-with-raised-fists-at-a-demonstration-in-the-city.jpg?s=612x612&w=0&k=20&c=O9UAMvOuvCVm6DYk_r5_VhMLPHZUHeQVr4Kxc63nZcI='
   },
+  {
+    id: 1,
+    name: 'Senatorial Candidate 1',
+    party: 'WIPER',
+    image: 'https://media.gettyimages.com/id/1345174163/photo/people-with-raised-fists-at-a-demonstration-in-the-city.jpg?s=612x612&w=0&k=20&c=O9UAMvOuvCVm6DYk_r5_VhMLPHZUHeQVr4Kxc63nZcI='
+  },
+  {
+    id: 1,
+    name: 'Senatorial Candidate 1',
+    party: 'WIPER',
+    image: 'https://media.gettyimages.com/id/1345174163/photo/people-with-raised-fists-at-a-demonstration-in-the-city.jpg?s=612x612&w=0&k=20&c=O9UAMvOuvCVm6DYk_r5_VhMLPHZUHeQVr4Kxc63nZcI='
+  },
+  {
+    id: 1,
+    name: 'Senatorial Candidate 1',
+    party: 'WIPER',
+    image: 'https://media.gettyimages.com/id/1345174163/photo/people-with-raised-fists-at-a-demonstration-in-the-city.jpg?s=612x612&w=0&k=20&c=O9UAMvOuvCVm6DYk_r5_VhMLPHZUHeQVr4Kxc63nZcI='
+  },
+  
 ];
 
 const gubernatorialCandidates = [
@@ -64,23 +90,42 @@ const gubernatorialCandidates = [
     image: 'https://media.gettyimages.com/id/1006071592/photo/revolution-fist-raised.jpg?s=612x612&w=0&k=20&c=Q15oEzFONYs0qyt_4ggtmHIaow4ENJix9K0UslNJ-AE='
   },
   {
-    id: 2,
-    name: 'Gubernatorial Candidate 2',
-    party: 'JUBILEE',
-    image: 'https://media.gettyimages.com/id/157376763/photo/politician-debating.jpg?s=612x612&w=0&k=20&c=CTtZdkqJ-43tUoIK3tM6QSbX7y2gV8pNNqYHMFCsYz8='
-  },
-  {
-    id: 3,
-    name: 'Gubernatorial Candidate 3',
-    party: 'UDA',
+    id: 1,
+    name: 'Gubernatorial Candidate 1',
+    party: 'ODM',
     image: 'https://media.gettyimages.com/id/1006071592/photo/revolution-fist-raised.jpg?s=612x612&w=0&k=20&c=Q15oEzFONYs0qyt_4ggtmHIaow4ENJix9K0UslNJ-AE='
   },
   {
-    id: 4,
-    name: 'Gubernatorial Candidate 4',
-    party: 'WIPER',
+    id: 1,
+    name: 'Gubernatorial Candidate 1',
+    party: 'ODM',
     image: 'https://media.gettyimages.com/id/1006071592/photo/revolution-fist-raised.jpg?s=612x612&w=0&k=20&c=Q15oEzFONYs0qyt_4ggtmHIaow4ENJix9K0UslNJ-AE='
   },
+  {
+    id: 1,
+    name: 'Gubernatorial Candidate 1',
+    party: 'ODM',
+    image: 'https://media.gettyimages.com/id/1006071592/photo/revolution-fist-raised.jpg?s=612x612&w=0&k=20&c=Q15oEzFONYs0qyt_4ggtmHIaow4ENJix9K0UslNJ-AE='
+  },
+  {
+    id: 1,
+    name: 'Gubernatorial Candidate 1',
+    party: 'ODM',
+    image: 'https://media.gettyimages.com/id/1006071592/photo/revolution-fist-raised.jpg?s=612x612&w=0&k=20&c=Q15oEzFONYs0qyt_4ggtmHIaow4ENJix9K0UslNJ-AE='
+  },
+  {
+    id: 1,
+    name: 'Gubernatorial Candidate 1',
+    party: 'ODM',
+    image: 'https://media.gettyimages.com/id/1006071592/photo/revolution-fist-raised.jpg?s=612x612&w=0&k=20&c=Q15oEzFONYs0qyt_4ggtmHIaow4ENJix9K0UslNJ-AE='
+  },
+  {
+    id: 1,
+    name: 'Gubernatorial Candidate 1',
+    party: 'ODM',
+    image: 'https://media.gettyimages.com/id/1006071592/photo/revolution-fist-raised.jpg?s=612x612&w=0&k=20&c=Q15oEzFONYs0qyt_4ggtmHIaow4ENJix9K0UslNJ-AE='
+  },
+  
 ];
 
 const AdminLandingPage = () => {
@@ -121,7 +166,7 @@ const AdminLandingPage = () => {
 
   return (
     <>
-    {/* <Navbar /> */}
+    <Navbar />
     <div className="admin-page">
       {/* Form Section */}
       <div className="admin-container">
@@ -232,9 +277,10 @@ const AdminLandingPage = () => {
           ))}
         </div>
       </div>
-    </div>
+      <Footer />
     </>
   );
 };
 
 export default AdminLandingPage;
+

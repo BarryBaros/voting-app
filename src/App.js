@@ -7,8 +7,6 @@ import Signup from './components/Signup';
 import AdminLogin from './components/AdminLogin';
 import Results from './components/Results';
 import AdminLandingPage from './components/AdminLandingPage';
-import Navbar from './components/Navbar';
-import './styles.css';
 
 function App() {
     const [isLoggedIn, setIsLoggedIn] = useState(false);
@@ -34,12 +32,32 @@ function App() {
                 <Routes>
                     <Route
                         path="/"
-                        element={isLoggedIn ? <Navigate to="/home" /> : <Login onLogin={handleLogin} />}
+                        element={
+                            !isLoggedIn ? (
+                                <Login onLogin={handleLogin} />
+                            ) : (
+                                <div>
+                                    <h2>Hi, Welcome!</h2>
+                                    <button
+                                        className="welcome"
+                                        onClick={() => setIsLoggedIn(false)}
+                                    >
+                                        Back to Login
+                                    </button>
+                                    {/* Home component with candidate list goes here */}
+                                </div>
+                            )
+                        }
                     />
-                    <Route path="/home" element={isLoggedIn ? <HomePage /> : <Navigate to="/" />} />
-                    <Route path="/results" element={isLoggedIn ? <Results /> : <Navigate to="/" />} />
-                    <Route path="/about" element={<About />} />
-                    <Route path="/signup" element={<Signup />} />
+                    <Route path="/candidates" element={<HomePage />} />
+                    <Route path="/results" element={<Results />} />
+                    <Route path="/admin-page" element={<AdminLandingPage />} />
+                    {/* <Route path="/logout"  element={<Login />} /> */}
+
+                    <Route
+                        path="/signup"
+                        element={<Signup onSignup={handleSignup} />}
+                    />
                     <Route
                         path="/admin"
                         element={<AdminLogin onAdminLogin={handleAdminLogin} />}

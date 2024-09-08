@@ -18,10 +18,10 @@ const Navbar = ({ onLogout }) => {
             <p className="tag">MAKE YOUR VOICE HEARD</p>
         </div>
         <div className="navbar-links">
-            <Link to="/home">Home</Link>
+            <Link to="/">Home</Link>
             <Link to="/results">Results</Link>
             <Link to="/about">About</Link>
-            <button className='logout' onClick={handleLogout}>Logout</button>
+    
         </div>
     </nav>
   );
