@@ -1,6 +1,5 @@
 import React from "react";
-import Navbar from "./Navbar";
-import Footer from './Footer';
+// import Navbar from "./Navbar";
 // import { FaFacebookF, FaTwitter, FaInstagram } from 'react-icons/fa';
 // import { useEffect } from "react";
 // import { useState } from "react";
@@ -73,7 +72,7 @@ const Results = () => {
         {Object.entries(elect_results).map(([position, candidates]) => renderTable(position, candidates))}
       </div>
     </div>
-    <Footer />
+
         </>
         
     );
