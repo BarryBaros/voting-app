@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
-import Navbar from './Navbar';
+// import Navbar from './Navbar';
 
-// Predefined candidate arrays
+//candidate arrays
 const presidentialCandidates = [
   {
     id: 1,
@@ -121,7 +121,7 @@ const AdminLandingPage = () => {
 
   return (
     <>
-    <Navbar />
+    {/* <Navbar /> */}
     <div className="admin-page">
       {/* Form Section */}
       <div className="admin-container">

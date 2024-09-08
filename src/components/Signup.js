@@ -18,7 +18,6 @@ function Signup({ onSignup }) {
             setMessage('Passwords do not match!');
             return;
         }
-        // Collect user data and pass it to the onSignup function
         const userData = {
             idNumber,
             firstName,
@@ -26,16 +25,18 @@ function Signup({ onSignup }) {
             dob,
             password
         };
-        onSignup(userData); // Pass user data to parent component for signup logic
+        if (onSignup) {
+            onSignup(userData); // Ensure onSignup is a function
+        }
         setMessage('You have successfully signed up!');
-        setTimeout(() => navigate('/'), 2000); //Redirect to login after signing up
+        setTimeout(() => navigate('/'), 2000); // Redirect to login after signing up
     };
 
     return (
         <div className="auth-container">
-             <h1>MY VOTE - MY VOICE</h1>
-             <p className="tag">MAKE YOUR VOICE HEARD</p>
-             
+            <h1>MY VOTE - MY VOICE</h1>
+            <p className="tag">MAKE YOUR VOICE HEARD</p>
+            
             <h2 className='sign'>Sign Up</h2>
             <form onSubmit={handleSubmit}>
 
@@ -95,11 +96,11 @@ function Signup({ onSignup }) {
                 <div className='input-container'>
                     <label className='label'>Confirm Password:</label>
                     <input
-                    type='password'
-                    placeholder='Confirm Password'
-                    value={confirmPassword}
-                    onChange={(e) => setConfirmPassword(e.target.value)}
-                    required
+                        type='password'
+                        placeholder='Confirm Password'
+                        value={confirmPassword}
+                        onChange={(e) => setConfirmPassword(e.target.value)}
+                        required
                     />
                 </div>
 

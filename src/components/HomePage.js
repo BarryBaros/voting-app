@@ -1,5 +1,5 @@
 import React from 'react';
-import Navbar from './Navbar'; 
+// import Navbar from './Navbar'; 
 import { FaFacebookF, FaTwitter, FaInstagram } from 'react-icons/fa';
 
 const HomePage = () => {
@@ -113,7 +113,7 @@ const HomePage = () => {
 
   return (
     <div className="candidates-page">
-      <Navbar />
+      {/* <Navbar /> */}
       <div className="welcome-message">
         <p>Welcome to the Election Portal! <br/> Cast your vote for your favorite candidates across various positions.</p>
       </div>

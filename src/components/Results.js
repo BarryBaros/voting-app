@@ -1,5 +1,5 @@
 import React from "react";
-import Navbar from "./Navbar";
+// import Navbar from "./Navbar";
 // import { FaFacebookF, FaTwitter, FaInstagram } from 'react-icons/fa';
 // import { useEffect } from "react";
 // import { useState } from "react";
@@ -65,7 +65,7 @@ const Results = () => {
   
     return (
     <>
-    <Navbar />
+    {/* <Navbar /> */}
     <div id="election-results-container">
       <h2 id="results-title">Election Results</h2>
       <div id="results-wrapper">

@@ -1,21 +1,30 @@
-import React from 'react'
-import { Link } from 'react-router-dom';
+import React from 'react';
+import { Link, useNavigate } from 'react-router-dom';
 
+const Navbar = ({ onLogout }) => {
+  const navigate = useNavigate();
 
-const Navbar = () => {
+  const handleLogout = () => {
+    if (onLogout) {
+      onLogout(); 
+      navigate('/');  
+    }
+  };
+
   return (
     <nav className="navbar">
         <div className="navbar-title">
-            MY VOTE MY CHOICE
+            <h1>MY VOTE MY CHOICE</h1>
+            <p className="tag">MAKE YOUR VOICE HEARD</p>
         </div>
         <div className="navbar-links">
-            <Link to="/">Home</Link>
+            <Link to="/home">Home</Link>
             <Link to="/results">Results</Link>
             <Link to="/about">About</Link>
-    
+            <button className='logout' onClick={handleLogout}>Logout</button>
         </div>
     </nav>
   );
 };
 
-export default Navbar
+export default Navbar;

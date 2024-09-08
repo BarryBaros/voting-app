@@ -1,16 +1,15 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from "react-router-dom";
 
 function Login({ onLogin }) {
     const [idNumber, setIdNumber] = useState('');
     const [password, setPassword] = useState('');
-    const navigate = useNavigate(); // Initialize navigate
+    const navigate = useNavigate(); 
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        onLogin(); // Perform login logic here
-        navigate('/candidates'); // Redirect to CandidatesPage after login
+        onLogin(); 
+        navigate('/home');
     };
 
     return (

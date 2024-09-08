@@ -140,13 +140,6 @@ button:hover {
     color: #E5B80B;
 }
 
-.navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: black ;
-    width: 100%;}
-
 span {
   color: white;
   cursor: pointer;
@@ -163,6 +156,9 @@ span:hover {
   margin: 10px 15px;
   font-family: 'Times New Roman', Times, serif;
   font-weight: 500;
+  background-color: black;
+  width: 100%;
+  padding: 1rem;
 }
 
 .navbar-title{
@@ -188,14 +184,14 @@ span:hover {
     text-decoration: none;
     font-size: 24px;
     color: #ffda45;
-    margin-left:20px;
-    border-bottom: none;
+    margin-left: 1px;
+    padding: 40px;
+    /* border-bottom: none; */
     transition: transform 0.3s ease, color 0.3s ease;
 }   
 
 .navbar-links a:hover, .navbar-links a:focus{
 color: #fefefe;
-border-bottom: 2px solid yellow;
 transform: scale(4.1);
 }
 .navbar-links a:active{
@@ -211,6 +207,7 @@ margin-left: 40px;
 color: #fefefe;
 }
 
+
 .home-p {
   font-family: Arial, Helvetica, sans-serif;
   text-align: center;
@@ -222,20 +219,20 @@ color: #fefefe;
 .welcome-message {
   font-size: 24px;
   color: white;
-  background-color: rgba(0, 0, 0, 0.7); /* Add background to make text readable */
+  background-color: rgba(0, 0, 0, 0.7); 
   padding: 20px;
   margin-bottom: 20px;
-  z-index: 10; /* Ensure it is in front of other elements */
-  position: relative; /* Relative to the candidates section */
+  z-index: 10; 
+  position: relative;
 }
 
 .welcome {
   font-size: 24px;
   color: white;
-  background-color: rgba(0, 0, 0, 0.7); /* Add background to make text readable */
+  background-color: rgba(0, 0, 0, 0.7); 
   padding: 20px;
   margin-bottom: 20px;
-  z-index: 10; /* Ensure it is in front of other elements */
+  z-index: 10; 
  
 }
 
