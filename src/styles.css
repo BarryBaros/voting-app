@@ -510,9 +510,6 @@ button[type="submit"]:hover {
   color: #fdd835;
 }
 
-.about-content {
-  width: 60%;
-}
 
 .about-content h1 {
   font-size: 2.5rem;
@@ -523,6 +520,7 @@ button[type="submit"]:hover {
 .about-content p {
   margin: 10px 0;
   font-size: 1.2rem;
+  text-align: start;
 }
 
 .feedback-form {

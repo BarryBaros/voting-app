@@ -13,7 +13,7 @@ function About() {
   return (
     <div className="about-container">
       <div className="about-content">
-        <h1>MY VOTE - MY VOICE</h1>
+        <h1>ABOUT THS PLATFORM</h1>
         <p><strong>One Vote:</strong> You can only vote once.</p>
         <p><strong>Final Decision:</strong> Your vote is final and can't be changed.</p>
         <p><strong>Secure Voting:</strong> Your vote is private and secure.</p>
