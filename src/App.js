@@ -10,6 +10,7 @@ import AdminLandingPage from './components/AdminLandingPage';
 import Navbar from './components/Navbar';
 import './styles.css';
 
+
 function App() {
     const [isLoggedIn, setIsLoggedIn] = React.useState(false);
 
