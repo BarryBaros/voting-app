@@ -499,3 +499,68 @@ button[type="submit"]:hover {
   color: red;
   font-size: large;
 }
+
+
+/* About style */
+.about-container {
+  display: flex;
+  justify-content: space-between;
+  padding: 40px;
+  background-color: #333;
+  color: #fdd835;
+}
+
+.about-content {
+  width: 60%;
+}
+
+.about-content h1 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.about-content p {
+  margin: 10px 0;
+  font-size: 1.2rem;
+}
+
+.feedback-form {
+  width: 35%;
+  background-color: #444;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+.feedback-form h3 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.feedback-form label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: bold;
+}
+
+.feedback-form textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border-radius: 5px;
+  border: none;
+}
+
+.submit-btn {
+  background-color: #888;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+.submit-btn:hover {
+  background-color: #666;
+}

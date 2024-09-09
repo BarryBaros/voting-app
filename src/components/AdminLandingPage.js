@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import Navbar from './Navbar';
+// import Navbar from './Navbar';
 
 //candidate arrays
 const presidentialCandidates = [
@@ -121,7 +121,7 @@ const AdminLandingPage = () => {
 
   return (
     <>
-    <Navbar />
+    {/* <Navbar /> */}
     <div className="admin-page">
       {/* Form Section */}
       <div className="admin-container">
