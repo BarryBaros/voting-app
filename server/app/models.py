@@ -7,7 +7,12 @@ class Voter(db.Model):
     year_of_birth = db.Column(db.Integer, nullable=False)
     password = db.Column(db.String(100), nullable=False)
 
-class Candidate(db.Mondel):
+class Candidate(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     name = db.Column(db.String(100), nullable=False)
     position = db.Column(db.String(100), nullable=False)
+
+class Vote(db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    Voter_id = db.Column(db.Integer, db.ForeignKey('voter.id'))
+    candidate_id = db.Column(db.Integer, db.ForeignKey('candidate.id'))
