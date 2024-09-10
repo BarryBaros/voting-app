@@ -1,7 +1,9 @@
 import React, { useState } from 'react';
+import Footer from './Footer';
+
 // import Navbar from './Navbar';
 
-//candidate arrays
+// Presidential candidates arrays
 const presidentialCandidates = [
   {
     id: 1,
@@ -121,14 +123,13 @@ const AdminLandingPage = () => {
 
   return (
     <>
-    {/* <Navbar /> */}
-    <div className="admin-page">
+    <div className="admin-dashboard-layout">
       {/* Form Section */}
-      <div className="admin-container">
-        <h1>Admin Dashboard</h1>
-        <h2 >Add Candidate</h2>
+      <div className="form-panel">
+        <h1 className="form-header">Admin Dashboard</h1>
+        <h2 className="form-subheader">Add Candidate</h2>
         <form className="candidate-form" onSubmit={handleSubmit}>
-          <div className="form-group">
+          <div className="form-field">
             <label htmlFor="name">Candidate Name:</label>
             <input
               type="text"
@@ -139,7 +140,7 @@ const AdminLandingPage = () => {
               required
             />
           </div>
-          <div className="form-group">
+          <div className="form-field">
             <label htmlFor="idNumber">ID Number:</label>
             <input
               type="text"
@@ -150,7 +151,7 @@ const AdminLandingPage = () => {
               required
             />
           </div>
-          <div className="form-group">
+          <div className="form-field">
             <label htmlFor="position">Position:</label>
             <select
               id="position"
@@ -165,7 +166,7 @@ const AdminLandingPage = () => {
               <option value="Governor">Governor</option>
             </select>
           </div>
-          <div className="form-group">
+          <div className="form-field">
             <label htmlFor="party">Party:</label>
             <select
               id="party"
@@ -175,14 +176,13 @@ const AdminLandingPage = () => {
               required
             >
               <option value="" disabled>Select a Party</option>
-              <option value="Party A">JUBILEE</option>
-              <option value="Party B">ODM</option>
-              <option value="Party C">WIPER</option>
-              <option value="Party D">UDA</option>
-             
+              <option value="JUBILEE">JUBILEE</option>
+              <option value="ODM">ODM</option>
+              <option value="WIPER">WIPER</option>
+              <option value="UDA">UDA</option>
             </select>
           </div>
-          <div className="form-group">
+          <div className="form-field">
             <label htmlFor="image">Image:</label>
             <input
               type="file"
@@ -193,46 +193,65 @@ const AdminLandingPage = () => {
               required
             />
           </div>
-          <button type="submit">Add Candidate</button>
+          <button type="submit" className="submit-btn">Submit</button>
         </form>
       </div>
 
       {/* Display Section */}
-      <div className="candidates-section">
-        <h2 className='title'>Presidential Candidates</h2>
-        <div className="candidates-container">
+      <div className="display-panel">
+        <h2 className="section-header">Presidential Candidates</h2>
+        <div className="candidates-list">
           {presidentialCandidates.map((candidate) => (
-            <div key={candidate.id} className="candidate-card">
-              <img src={candidate.image} alt={candidate.name} />
-              <h3>{candidate.name}</h3>
-              <p>Party: {candidate.party}</p>
+            <div key={candidate.id} className="candidate-car">
+              <img src={candidate.image} alt={candidate.name} className="candidate-imag" />
+              <div className="candidate-inf">
+                <h3 className="candidate-nam">{candidate.name}</h3>
+                <p className="candidate-party">Party: {candidate.party}</p>
+              </div>
+              <div className="candidate-actions">
+                <button className="edit-btn">Edit</button>
+                <button className="delete-btn" >Delete</button>
+              </div>
             </div>
           ))}
         </div>
 
-        <h2 className='title'>Senatorial Candidates</h2>
-        <div className="candidates-container">
+        <h2 className="section-header">Senatorial Candidates</h2>
+        <div className="candidates-list">
           {senatorialCandidates.map((candidate) => (
-            <div key={candidate.id} className="candidate-card">
-              <img src={candidate.image} alt={candidate.name} />
-              <h3>{candidate.name}</h3>
-              <p>Party: {candidate.party}</p>
+            <div key={candidate.id} className="candidate-car">
+              <img src={candidate.image} alt={candidate.name} className="candidate-imag" />
+              <div className="candidate-inf">
+                <h3 className="candidate-nam">{candidate.name}</h3>
+                <p className="candidate-party">Party: {candidate.party}</p>
+              </div>
+              <div className="candidate-actions">
+                <button className="edit-btn">Edit</button>
+                <button className="delete-btn" >Delete</button>
+              </div>
             </div>
           ))}
         </div>
 
-        <h2 className='title'>Gubernatorial Candidates</h2>
-        <div className="candidates-container">
+        <h2 className="section-header">Gubernatorial Candidates</h2>
+        <div className="candidates-list">
           {gubernatorialCandidates.map((candidate) => (
-            <div key={candidate.id} className="candidate-card">
-              <img src={candidate.image} alt={candidate.name} />
-              <h3>{candidate.name}</h3>
-              <p>Party: {candidate.party}</p>
+            <div key={candidate.id} className="candidate-car">
+              <img src={candidate.image} alt={candidate.name} className="candidate-imag" />
+              <div className="candidate-inf">
+                <h3 className="candidate-nam">{candidate.name}</h3>
+                <p className="candidate-party">Party: {candidate.party}</p>
+              </div>
+              <div className="candidate-actions">
+                <button className="edit-btn">Edit</button>
+                <button className="delete-btn" >Delete</button>
+              </div>
             </div>
           ))}
         </div>
       </div>
     </div>
+    <Footer />
     </>
   );
 };
