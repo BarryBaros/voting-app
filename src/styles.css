@@ -137,6 +137,7 @@ span:hover {
   font-weight: 500;
   padding: 20px;
   background-color: #1F1D1D;
+  
 }
 
 .navbar-title {
@@ -172,21 +173,22 @@ span:hover {
 }
 
 .navbar-links .logout {
-  background-color: #0f0101;
-  color: #E5B80B;
+  background-color: #0f010100;
+  color: #e6b219;
   border: none;
-  padding: 0.5rem 1rem;
+  margin-bottom: 20px;
   cursor: pointer;
   margin-left: 15px;
-  font-size: 24px;
+  font-size: 18px;
   text-align: center;
   box-sizing: border-box;
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .navbar-links .logout:hover {
-  background-color: black;
-  color: white;
+  background-color: rgba(0, 0, 0, 0);
+  color: rgb(174, 173, 168);
+  text-decoration: underline;
 }
 
 @media (max-width: 768px) {
@@ -378,5 +380,178 @@ span:hover {
   border-bottom: 1px solid #ddd;
 }
 
-.admin-page {
-  display:
+
+/*PLEASE DON'T DELETE THE BELOW STYLING */
+
+
+
+
+/* Container for the Layout */
+.admin-dashboard-layout {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+}
+
+/* Form Panel Styles */
+.form-panel {
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 40%;
+}
+
+.form-header {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.form-subheader {
+  font-size: 18px;
+  margin-bottom: 20px;
+  color: #555;
+}
+
+.candidate-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-field {
+  margin-bottom: 15px;
+}
+
+.form-field label {
+  font-size: 16px;
+  margin-bottom: 5px;
+  display: block;
+}
+
+.form-field input,
+.form-field select {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+.submit-btn {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.submit-btn:hover {
+  background-color: #0056b3;
+}
+
+/* Display Panel Styles */
+.display-panel {
+  width: 55%;
+}
+
+.section-header {
+  font-size: 22px;
+  margin-bottom: 15px;
+  color: #333;
+}
+
+.candidates-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.candidate-car {
+  display: flex;
+  align-items: center;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 10px;
+  margin-bottom: 10px;
+  background-color: #f9f9f9;
+}
+
+.candidate-imag {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  margin-right: 15px;
+  object-fit: cover;
+}
+
+.candidate-inf {
+  display: flex;
+  flex-direction: column;
+}
+
+.candidate-name {
+  font-size: 18px;
+  font-weight: bold;
+  margin: 0;
+}
+
+.candidate-party {
+  font-size: 14px;
+  color: #777;
+}
+
+@media (max-width: 768px) {
+  .admin-dashboard-layout {
+    flex-direction: column;
+  }
+
+  .form-panel,
+  .display-panel {
+    width: 100%;
+  }
+
+  .candidate-image {
+    width: 60px;
+    height: 60px;
+  }
+}
+
+
+/* Candidate Card Actions */
+.candidate-actions {
+  display: flex;
+  gap: 10px;
+}
+
+.edit-btn,
+.delete-btn {
+  border: none;
+  padding: 8px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  color: #fff;
+  
+}
+
+.edit-btn {
+  background-color: #28a745;
+  margin-left: 400px;
+}
+
+.edit-btn:hover {
+  background-color: #218838;
+}
+
+.delete-btn {
+  background-color: #dc3545;
+}
+
+.delete-btn:hover {
+  background-color: #c82333;
+}
+.form-field label{
+  color: #000000;
+}

@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import Footer from './Footer';
 
-// import Navbar from './Navbar';
+import Navbar from './Navbar';
 
 // Presidential candidates arrays
 const presidentialCandidates = [
@@ -123,6 +123,7 @@ const AdminLandingPage = () => {
 
   return (
     <>
+   
     <div className="admin-dashboard-layout">
       {/* Form Section */}
       <div className="form-panel">
