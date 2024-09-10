@@ -42,6 +42,10 @@ h2 {
   outline-offset: 5px;
 }
 
+/* .signup {
+  color: #E5B80B;
+} */
+
 form {
   display: flex;
   flex-wrap: wrap;
@@ -49,25 +53,33 @@ form {
   margin-bottom: 20px;
 }
 
- h1{
-    margin-bottom: 5px;
-    font-size: 20px;
-    text-align: left;
-    margin-left: 20px;
-}
+/* .auth-container {
+  margin-top: 20px;
+} */
 
-.tag {
-    margin-top: 5px;
-    font-size: 18px;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    margin-bottom: 30px;
-    text-align: left;
-      margin-left: 20px;}
+/* .form-row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 15px;
+  width: 100%;
+} */
+
+/* .form-group {
+  width: 48%;
+} */
 
 h1{
   margin-bottom: 5px;
   font-size: 36px;
 }
+
+.tag {
+  margin-top: 5px;
+  font-size: 18px;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  margin-bottom: 30px;
+}
+
 
 
 label {
@@ -83,6 +95,10 @@ label {
   width: 100%;
   color: black;
 }
+
+/* .sign {
+  color: black;
+} */
 
 .input-container {
   width: 48%;
@@ -131,15 +147,6 @@ button:hover {
   background-color: #d1a500;
 }
 
-.link {
-    color: white;
-    cursor: pointer;
-}
-
-.link:hover {
-    color: #E5B80B;
-}
-
 span {
   color: white;
   cursor: pointer;
@@ -156,9 +163,7 @@ span:hover {
   margin: 10px 15px;
   font-family: 'Times New Roman', Times, serif;
   font-weight: 500;
-  background-color: black;
-  width: 100%;
-  padding: 1rem;
+  /*background-color: black ; */
 }
 
 .navbar-title{
@@ -176,22 +181,17 @@ span:hover {
 }
  
 .navbar-links a{
-    text-decoration: none;
-    font-size: 50px;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    color: #E5B80B;
-    margin:15px; 
-    text-decoration: none;
-    font-size: 24px;
-    color: #ffda45;
-    margin-left: 1px;
-    padding: 40px;
-    /* border-bottom: none; */
-    transition: transform 0.3s ease, color 0.3s ease;
+  text-decoration: none;
+  font-size: 24px;
+  color: #ffda45;
+  margin-left:20px;
+  border-bottom: none;
+  transition: transform 0.3s ease, color 0.3s ease;
 }   
 
 .navbar-links a:hover, .navbar-links a:focus{
 color: #fefefe;
+border-bottom: 2px solid yellow;
 transform: scale(4.1);
 }
 .navbar-links a:active{
@@ -207,38 +207,11 @@ margin-left: 40px;
 color: #fefefe;
 }
 
-
-.home-p {
-  font-family: Arial, Helvetica, sans-serif;
-  text-align: center;
-  justify-content: center;
-  align-items: center;
-  margin-left: 500px;
-}
-
-.welcome-message {
-  font-size: 24px;
-  color: white;
-  background-color: rgba(0, 0, 0, 0.7); 
-  padding: 20px;
-  margin-bottom: 20px;
-  z-index: 10; 
-  position: relative;
-}
-
-.welcome {
-  font-size: 24px;
-  color: white;
-  background-color: rgba(0, 0, 0, 0.7); 
-  padding: 20px;
-  margin-bottom: 20px;
-  z-index: 10; 
- 
-}
-
 .candidates-page {
   padding: 20px;
   background-color: #1F1D1D;
+  /* width: 100%;
+  max-width: 1200px; */
   
 }
 
@@ -295,18 +268,17 @@ color: #fefefe;
 }
 
 .candidate-image img {
-  width: 200px;
-  height: 200px;
+  width: 70px;
+  height: 70px;
   border-radius: 50%;
   object-fit: cover;
+  margin-bottom: 20px;
 }
 
 .vote-button {
   font-size: 16px;
   width:70px;
    padding: 10px 15px; 
-
-
   /* box-sizing: border-box;     */
   background-color: #000000;
   color: #edc841;
@@ -346,7 +318,9 @@ color: #fefefe;
 
 
 
-/*RESULTS STYLING*/
+/* RESULTS STYLING */
+
+
 
 #election-results-container {
   padding: 20px;
@@ -409,6 +383,11 @@ color: #fefefe;
   border-radius: 50%;
 }
 
+.candidate-image {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
 
 .results-table thead {
   background-color: #f4f4f4;
@@ -418,18 +397,18 @@ color: #fefefe;
   border-bottom: 1px solid #ddd;
 }
 
-/*Admin Page*/
+/* /Admin Page/ */
 
 
-/* .admin-page {
+.admin-page {
   display: flex;
   justify-content: space-between;
   padding: 20px;
   font-family: 'Times New Roman', Times, serif;
   
-} */
+}
 
-/* .admin-container {
+.admin-container {
   width: 35%;
   background-color: #f9f9f9;
   padding: 20px;
@@ -481,258 +460,53 @@ button[type="submit"]:hover {
   background-color: #145FA3;
 }
 
-.candidate-card:hover {
-  transform: translateY(-5px);
+
+/* .candidates-section h2{
+  font-size: 30px;
+  font-family: 'Times New Roman', Times, serif;
 } */
 
-.b-vote {
-  width: fit-content;
-  padding: 5px;
-}
-
-.success {
-  color: green;
-  font-size: large;
-}
-
-.error {
-  color: red;
-  font-size: large;
-}
-
-
-/* About style */
-.about-container {
+/* .candidates-container {
   display: flex;
-  justify-content: space-between;
-  padding: 40px;
-  background-color: #333;
-  color: #fdd835;
-}
-
-
-.about-content h1 {
-  font-size: 2.5rem;
-  font-weight: bold;
-  margin-bottom: 20px;
-}
-
-.about-content p {
-  margin: 10px 0;
-  font-size: 1.2rem;
-  text-align: start;
-}
-
-.feedback-form {
-  width: 35%;
-  background-color: #444;
-  padding: 20px;
-  border-radius: 8px;
-}
-
-.feedback-form h3 {
-  font-size: 1.5rem;
-  margin-bottom: 10px;
-}
-
-.feedback-form label {
-  display: block;
-  margin-bottom: 8px;
-  font-weight: bold;
-}
-
-.feedback-form textarea {
-  width: 100%;
-  padding: 10px;
-  margin-bottom: 20px;
-  border-radius: 5px;
-  border: none;
-}
-
-.submit-btn {
-  background-color: #888;
-  color: white;
-  padding: 10px 20px;
-  border: none;
-  cursor: pointer;
-  border-radius: 5px;
-  font-size: 1rem;
-}
-
-.submit-btn:hover {
-  background-color: #666;
-}
-
-
-/* UPDATE DON'T DELETE  */
-
-
-
-
-/* Container for the Layout */
-.admin-dashboard-layout {
-  display: flex;
-  justify-content: space-between;
-  padding: 20px;
-}
-
-/* Form Panel Styles */
-.form-panel {
-  background-color: #ffffff;
-  padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  width: 40%;
-}
-
-.form-header {
-  font-size: 24px;
-  font-weight: bold;
-  margin-bottom: 10px;
-}
-
-.form-subheader {
-  font-size: 18px;
-  margin-bottom: 20px;
-  color: #555;
-}
-
-.candidate-form {
-  display: flex;
-  flex-direction: column;
-}
-
-.form-field {
-  margin-bottom: 15px;
-  
-}
-
-.form-field label {
-  font-size: 16px;
-  margin-bottom: 5px;
-  display: block;
-  color: #030905;
-}
-
-.form-field input,
-.form-field select {
-  width: 100%;
-  padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  box-sizing: border-box;
-}
-
-.submit-btn {
-  background-color: #007bff;
-  color: #fff;
-  border: none;
-  padding: 10px 20px;
-  border-radius: 4px;
-  cursor: pointer;
-  font-size: 16px;
-}
-
-.submit-btn:hover {
-  background-color: #0056b3;
-}
-
-/* Display Panel Styles */
-.display-panel {
-  width: 55%;
-}
-
-.section-header {
-  font-size: 22px;
-  margin-bottom: 15px;
-  color: #333;
-}
-
-.candidates-list {
-  display: flex;
-  flex-direction: column;
-}
-
-.candidate-car {
-  display: flex;
-  align-items: center;
-  border: 1px solid #ddd;
-  border-radius: 4px;
-  padding: 10px;
-  margin-bottom: 10px;
-  background-color: #f9f9f9;
-}
-
-.candidate-imag {
-  width: 80px;
-  height: 80px;
-  border-radius: 50%;
-  margin-right: 15px;
-  object-fit: cover;
-}
-
-.candidate-inf {
-  display: flex;
-  flex-direction: column;
-}
-
-.candidate-nam {
-  font-size: 18px;
-  font-weight: bold;
-  margin: 0;
-}
-
-.candidate-party {
-  font-size: 14px;
-  color: #777;
-}
-
-
-@media (max-width: 768px) {
-  .admin-dashboard-layout {
-    flex-direction: column;
-  }
-
-  .form-panel,
-  .display-panel {
-    width: 100%;
-  }
-
-  .candidate-image {
-    width: 60px;
-    height: 60px;
-  }
-}
-/* Candidate Card Actions */
-.candidate-actions {
-  display: flex;
+  flex-wrap: wrap;
   gap: 10px;
-  margin-left: 300px;
+  justify-content: space-between;
+} */
+
+/* .candidate-card {
+  background-color: #f0f0f0;
+  border-radius: 8px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  width: 180px;
+  padding: 10px;
+  text-align: center;
+  transition: transform 0.3s ease-in-out;
+} */
+
+.candidate-card:hover {
+  transform: translateY(-5px);
 }
 
-.edit-btn,
-.delete-btn {
-  border: none;
-  padding: 8px 45px 8px 30px;
-  border-radius: 4px;
-  cursor: pointer;
-  font-size: 14px;
-  color: #fff;
-  
-}
+/* .candidate-card img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 8px;
+} */
 
-.edit-btn {
-  background-color: #28a745;
-}
+/* .candidate-card h3 {
+  color: #333;
+  margin-top: 10px;
+  font-size: 16px;
+} */
 
-.edit-btn:hover {
-  background-color: #218838;
-}
+/* .candidate-card p {
+  color: #666;
+  margin-top: 5px;
+  font-size: 13px;
+} */
 
-.delete-btn {
-  background-color: #dc3545;
-}
+/* .title h2{
+  color: #000000;
 
-.delete-btn:hover {
-  background-color: #c82333;
-}
+} */
