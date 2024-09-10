@@ -16,3 +16,8 @@ class Vote(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     Voter_id = db.Column(db.Integer, db.ForeignKey('voter.id'))
     candidate_id = db.Column(db.Integer, db.ForeignKey('candidate.id'))
+
+class Admin(db.Model):
+    id  = db.Column(db.Integer, primary_key=True)
+    name = db.Column(db.String(50), nullable=False)
+    id_numeber = db.Column(db.Integer, nullable=False)
