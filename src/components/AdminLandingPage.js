@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import Footer from './Footer';
 
-// import Navbar from './Navbar';
+import Navbar from './Navbar';
 
 // Presidential candidates arrays
 const presidentialCandidates = [
@@ -29,7 +29,7 @@ const presidentialCandidates = [
     party: 'ODM',
     image: 'https://media.gettyimages.com/id/1385767484/photo/mature-man-leading-a-demonstration-using-a-megaphone.jpg?s=612x612&w=0&k=20&c=e1e9IKMU5m3jq71J1--HwahReURFN0wxI8x_arLK2JQ='
   },
-];
+];// Presidential candidates arrays
 
 const senatorialCandidates = [
   {
@@ -123,6 +123,7 @@ const AdminLandingPage = () => {
 
   return (
     <>
+   
     <div className="admin-dashboard-layout">
       {/* Form Section */}
       <div className="form-panel">

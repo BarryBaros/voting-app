@@ -157,25 +157,28 @@ span:hover {
   font-weight: 500;
    padding: 20px;
   background-color: #1F1D1D;
+  
 }
 
 .navbar-title{
   font-size:24px;
   font-family: 'Times New Roman', Times, serif;
   font-weight: 500;
-  color:#E5B80B;
-  }
+  color: #E5B80B;
+  padding: 0 0 0 10px;
+}
 
 .navbar-title:hover{
   cursor: pointer;
   color:white;
 }
-  
-  .navbar-links {
-    display: flex;
-    align-items: center;
-    flex-wrap: wrap;
-  }
+
+.navbar-links {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-left: 5px;
+}
 
  
 .navbar-links a{
@@ -198,25 +201,22 @@ text-decoration: underline;
 
 
 .navbar-links .logout {
-  background-color:#0f0101;
-  color: #E5B80B;
+  background-color: #0f010100;
+  color: #e6b219;
   border: none;
-  padding: 0.5rem 1rem;
+  margin-bottom: 20px;
   cursor: pointer;
   margin-left: 15px;
-  font-size: 24px;
-  display: flex;
-  align-items: center; 
-  margin: 0 ;
-  /* width: 100%; Ensure full width on small screens */
+  font-size: 18px;
   text-align: center;
   box-sizing: border-box;
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .navbar-links .logout:hover {
-  background-color: black;
-  color:white;
+  background-color: rgba(0, 0, 0, 0);
+  color:rgb(174, 173, 168);
+  text-decoration: underline;
   
 }
 
@@ -330,7 +330,7 @@ text-decoration: underline;
 }
 
 .footer {
-  padding: 20px;
+  padding: 10px;
   background-color: #1F1D1D;
   color: #fff;
   text-align: center;
@@ -427,144 +427,4 @@ text-decoration: underline;
 /* /Admin Page/ */
 
 
-.admin-page {
-  display: flex;
-  justify-content: space-between;
-  padding: 20px;
-  font-family: 'Times New Roman', Times, serif;
-  
-}
 
-.admin-container {
-  width: 35%;
-  background-color: #f9f9f9;
-  padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
-}
-
-.admin-container h1, .admin-container h2 {
-  color: #333;
-  text-align: center;
-}
-
-.candidate-form {
-  display: flex;
-  flex-direction: column;
-}
-
-.form-group {
-  margin-bottom: 10px;
-}
-
-.form-group label {
-  font-size: 16px;
-  color: #333;
-  margin-bottom: 5px;
-}
-
-.form-group input,
-.form-group select {
-  width: 100%;
-  padding: 8px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-}
-
-button[type="submit"] {
-  background-color: #1F77D0;
-  color: white;
-  padding: 10px;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-  font-size: 16px;
-  margin-top: 10px;
-  margin-bottom: 0;
-}
-
-button[type="submit"]:hover {
-  background-color: #145FA3;
-}
-
-.candidate-card:hover {
-  transform: translateY(-5px);
-}
-
-.b-vote {
-  width: fit-content;
-  padding: 5px;
-}
-
-.success {
-  color: green;
-  font-size: large;
-}
-
-.error {
-  color: red;
-  font-size: large;
-}
-
-
-/* About style */
-.about-container {
-  display: flex;
-  justify-content: space-between;
-  padding: 40px;
-  background-color: #333;
-  color: #fdd835;
-}
-
-
-.about-content h1 {
-  font-size: 2.5rem;
-  font-weight: bold;
-  margin-bottom: 20px;
-}
-
-.about-content p {
-  margin: 10px 0;
-  font-size: 1.2rem;
-  text-align: start;
-}
-
-.feedback-form {
-  width: 35%;
-  background-color: #444;
-  padding: 20px;
-  border-radius: 8px;
-}
-
-.feedback-form h3 {
-  font-size: 1.5rem;
-  margin-bottom: 10px;
-}
-
-.feedback-form label {
-  display: block;
-  margin-bottom: 8px;
-  font-weight: bold;
-}
-
-.feedback-form textarea {
-  width: 100%;
-  padding: 10px;
-  margin-bottom: 20px;
-  border-radius: 5px;
-  border: none;
-}
-
-.submit-btn {
-  background-color: #888;
-  color: white;
-  padding: 10px 20px;
-  border: none;
-  cursor: pointer;
-  border-radius: 5px;
-  font-size: 1rem;
-}
-
-.submit-btn:hover {
-  background-color: #666;
-}
