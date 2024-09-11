@@ -135,7 +135,6 @@ span:hover {
   align-items: center;
   font-family: 'Times New Roman', Times, serif;
   font-weight: 500;
-  padding: 20px;
   background-color: #1F1D1D;
   
 }
@@ -145,6 +144,7 @@ span:hover {
   font-family: 'Times New Roman', Times, serif;
   font-weight: 500;
   color: #E5B80B;
+  padding: 0 0 0 10px;
 }
 
 .navbar-title:hover {
@@ -156,6 +156,7 @@ span:hover {
   display: flex;
   align-items: center;
   flex-wrap: wrap;
+  margin-left: 5px;
 }
 
 .navbar-links a {
@@ -291,7 +292,7 @@ span:hover {
 }
 
 .footer {
-  padding: 20px;
+  padding: 10px;
   background-color: #1F1D1D;
   color: #fff;
   text-align: center;
@@ -554,4 +555,60 @@ span:hover {
 }
 .form-field label{
   color: #000000;
+}
+
+
+/*ABOUT PAGE*/
+
+.about-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 20px;
+  background-color: #f8f9fa; /* Light background color */
+  margin-top: 100px;
+  margin-bottom: 170px;
+}
+
+.about-content {
+  width: 50%; /* Takes 60% of the width */
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow */
+}
+
+.feedback-form {
+  width: 35%; /* Takes 35% of the width */
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow */
+}
+
+.feedback-form h3 {
+  margin-bottom: 15px;
+  font-size: 1.5rem;
+  color: #333;
+}
+
+.feedback-form textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.submit-btn {
+  background-color: #007bff; /* Blue button */
+  color: #fff;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.submit-btn:hover {
+  background-color: #0056b3; /* Darker blue on hover */
 }
