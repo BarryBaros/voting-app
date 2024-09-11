@@ -1,4 +1,7 @@
 import React, { useState } from 'react';
+import Footer from './Footer';
+import Navbar from './Navbar';
+
 
 function About() {
   const [message, setMessage] = useState('');
@@ -11,15 +14,18 @@ function About() {
   };
 
   return (
+    <>
+    <Navbar />
     <div className="about-container">
       <div className="about-content">
-        <h1>ABOUT THS PLATFORM</h1>
+        <h1>ABOUT US</h1>
         <p><strong>One Vote:</strong> You can only vote once.</p>
         <p><strong>Final Decision:</strong> Your vote is final and can't be changed.</p>
         <p><strong>Secure Voting:</strong> Your vote is private and secure.</p>
         <p><strong>Confirmation:</strong> You’ll receive a confirmation after voting.</p>
         <p><strong>Eligibility:</strong> Only eligible users can vote.</p>
-        <p>Need Help? Reach out if you have any questions.</p>
+        <br />
+        <p><b>Feel free to leave a feedback on your experience with us.</b></p>
       </div>
       
       <div className="feedback-form">
@@ -37,6 +43,8 @@ function About() {
         </form>
       </div>
     </div>
+    <Footer />
+    </>
   );
 }
 
