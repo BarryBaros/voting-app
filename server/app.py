@@ -26,7 +26,7 @@ def get_candidates():
 @app.route('/api/admin-login', methods=['POST'])
 def admin_login():
     data = request.json
-    admin = Admin.query.filter_by(id_number=data['idNumber']).first()
+    admin = Admin.query.filter_by(id_number=data['id_number']).first()
 
     if admin and admin.password == data['password']:
         response = make_response(jsonify({'message': 'Login successful'}), 200)
