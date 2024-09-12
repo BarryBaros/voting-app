@@ -9,6 +9,12 @@ class Voter(db.Model):
     year_of_birth = db.Column(db.Integer, nullable=False)
     password = db.Column(db.String(100), nullable=False)
 
+    def set_password(self, password):
+        self.password = bcrypt.generate_password_hash(password).decode('utf-8')
+
+    def check_password(self, passowrd):
+        return bcrypt.check_password_hash(self.password, passowrd)
+
 class Candidate(db.Model):
     __tablename__ = "candidates"
 
