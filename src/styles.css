@@ -381,6 +381,26 @@ span:hover {
   border-bottom: 1px solid #ddd;
 }
 
+/* message container */
+.message {
+  margin-top: 30px; 
+  font-size: 16px;
+  padding: 10px;
+  border-radius: 5px;
+  width: 100%;
+  max-width: 400px;
+  text-align: center; 
+}
+
+.message.success {
+  color: green;
+}
+
+.message.error {
+  color: red;
+}
+
+
 
 /*PLEASE DON'T DELETE THE BELOW STYLING */
 

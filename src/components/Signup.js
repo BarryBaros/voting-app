@@ -104,7 +104,7 @@ function Signup({ onSignup }) {
                 </div>
 
                 <button className='sign_up' type="submit">Sign Up</button>
-                {message && <p className={message.includes('do not') ? 'error' : 'success'}>{message}</p>}
+                {message && <div className={`message ${message.includes('do not') ? 'error' : 'success'}`}>{message}</div>}
             </form>
             <p>Already have an account? <Link to="/">Login</Link></p> {/* Link to Login Page */}
         </div>
