@@ -10,13 +10,13 @@ const AdminLandingPage = () => {
         idNumber: '',
         position: '',
         party: '',
-        image: null,
+        image: '',
     });
     const [candidates, setCandidates] = useState([]);
 
     useEffect(() => {
         // Fetch existing candidates
-        axios.get('http://127.0.0.1:5555/api/candidates')
+        axios.get('/api/candidates')
             .then(response => {
                 setCandidates(response.data);
             })
@@ -33,25 +33,18 @@ const AdminLandingPage = () => {
         });
     };
 
-    const handleImageChange = (e) => {
-        setCandidate({
-            ...candidate,
-            image: URL.createObjectURL(e.target.files[0]),
-        });
-    };
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        axios.post('http://127.0.0.1:5555/api/candidates', candidate)
+        axios.post('/api/candidates', candidate)
             .then(response => {
                 // Refresh candidates list
                 setCandidates([...candidates, response.data]);
                 setCandidate({
                     name: '',
-                    idNumber: '',
                     position: '',
                     party: '',
-                    image: null,
+                    image: '',
                 });
             })
             .catch(error => {
@@ -75,17 +68,6 @@ const AdminLandingPage = () => {
                                 id="name"
                                 name="name"
                                 value={candidate.name}
-                                onChange={handleChange}
-                                required
-                            />
-                        </div>
-                        <div className="form-field">
-                            <label htmlFor="idNumber">ID Number:</label>
-                            <input
-                                type="text"
-                                id="idNumber"
-                                name="idNumber"
-                                value={candidate.idNumber}
                                 onChange={handleChange}
                                 required
                             />
@@ -124,12 +106,14 @@ const AdminLandingPage = () => {
                         <div className="form-field">
                             <label htmlFor="image">Image:</label>
                             <input
-                                type="file"
+                                type="text"
                                 id="image"
                                 name="image"
-                                accept="image/*"
-                                onChange={handleImageChange}
+                                value={candidate.image}
+                                onChange={handleChange}
                                 required
+                               
+                                
                             />
                         </div>
                         <button type="submit" className="submit-btn">Submit</button>
