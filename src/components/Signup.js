@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 
-function Signup({ onSignup }) {
+function Signup() {
     const [idNumber, setIdNumber] = useState('');
     const [firstName, setFirstName] = useState('');
     const [lastName, setLastName] = useState('');
@@ -18,7 +18,7 @@ function Signup({ onSignup }) {
             setMessage('Passwords do not match!');
             return;
         }
-        // Collect user data and pass it to the onSignup function
+
         const userData = {
             idNumber,
             firstName,
@@ -26,16 +26,36 @@ function Signup({ onSignup }) {
             dob,
             password
         };
-        onSignup(userData); // Pass user data to parent component for signup logic
-        setMessage('You have successfully signed up!');
-        setTimeout(() => navigate('/'), 2000); //Redirect to login after signing up
+
+        // Make a POST request to the signup route
+        fetch('/api/signup', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(userData)
+        })
+        .then(response => response.json())
+        .then(data => {
+            if (data.message === 'Signup successful') {
+                console.log("signup successful")
+                setMessage(data.message);
+                setTimeout(() => navigate('/'), 3000); // Redirect to login after 3 seconds
+            } else {
+                setMessage('Signup failed.');
+            }
+        })
+        .catch(error => {
+            setMessage('An error occurred during signup.');
+            console.log(error)
+        });
     };
 
     return (
         <div className="auth-container">
              <h1>MY VOTE - MY VOICE</h1>
              <p className="tag">MAKE YOUR VOICE HEARD</p>
-             
+
             <h2 className='sign'>Sign Up</h2>
             <form onSubmit={handleSubmit}>
 
@@ -70,7 +90,7 @@ function Signup({ onSignup }) {
                         required
                     />
                 </div>
-                
+
                 <div className="input-container">
                     <label className='label'>Date of Birth:</label>
                     <input
@@ -95,18 +115,18 @@ function Signup({ onSignup }) {
                 <div className='input-container'>
                     <label className='label'>Confirm Password:</label>
                     <input
-                    type='password'
-                    placeholder='Confirm Password'
-                    value={confirmPassword}
-                    onChange={(e) => setConfirmPassword(e.target.value)}
-                    required
+                        type='password'
+                        placeholder='Confirm Password'
+                        value={confirmPassword}
+                        onChange={(e) => setConfirmPassword(e.target.value)}
+                        required
                     />
                 </div>
 
                 <button className='sign_up' type="submit">Sign Up</button>
                 {message && <p className={message.includes('do not') ? 'error' : 'success'}>{message}</p>}
             </form>
-            <p>Already have an account? <Link to="/">Login</Link></p> {/* Link to Login Page */}
+            <p>Already have an account? <Link to="/">Login</Link></p>
         </div>
     );
 }
