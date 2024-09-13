@@ -100,8 +100,8 @@ const AdminLandingPage = () => {
                                 <option value="WIPER">WIPER</option>
                                 <option value="UDA">UDA</option>
                                 <option value="UDA">REPUBLICAN</option>
-                                <option value="UDA">DEMOCRAT</option>
-                                <option value="UDA">NARC</option>
+                                <option value="DEMOCRAT">DEMOCRAT</option>
+                                <option value="NARC">NARC</option>
                             </select>
                         </div>
                         <div className="form-field">
