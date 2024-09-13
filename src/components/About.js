@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import Footer from './Footer';
-import Navbar from './Navbar';
+
 
 
 function About() {
@@ -15,7 +15,7 @@ function About() {
 
   return (
     <>
-    <Navbar />
+  
     <div className="about-container">
       <div className="about-content">
         <h1>ABOUT US</h1>

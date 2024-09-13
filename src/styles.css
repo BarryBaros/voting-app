@@ -270,13 +270,14 @@ span:hover {
   height: 70px;
   border-radius: 50%;
   object-fit: cover;
-  margin-bottom: 20px;
+  margin-bottom: 40px;
+  margin-top: 0px;
 }
 
 .vote-button {
   font-size: 16px;
   width: 70px;
-  padding: 10px 15px;
+  padding: 5px 15px;
   background-color: #000000;
   color: #edc841;
   border: none;

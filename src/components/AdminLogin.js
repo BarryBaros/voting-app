@@ -23,7 +23,8 @@ function AdminLogin({ onAdminLogin }) {
             }
         } catch (error) {
             console.error('Login failed:', error);
-            alert('Invalid credentials');
+            alert('LOGIN FAILED: CHECK ID OR PASSWORD');
+
         }
     };
 

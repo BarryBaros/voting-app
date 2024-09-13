@@ -42,7 +42,7 @@ function App() {
                     />
                     <Route path="/home" element={isLoggedIn ? <HomePage /> : <Navigate to="/" />} />
                     <Route path="/results" element={isLoggedIn ? <Results /> : <Navigate to="/" />} />
-                    <Route path="/about" element={<About />} />
+                    <Route path="/about" element={isLoggedIn ? <About />: <Navigate to="/" />} />
                     <Route
                         path="/signup"
                         element={<Signup onSignup={handleSignup} />}

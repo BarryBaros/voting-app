@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import Footer from './Footer';
-import Navbar from './Navbar';
 import axios from 'axios';
 
 // Example component for displaying candidates
@@ -54,7 +53,6 @@ const AdminLandingPage = () => {
 
     return (
         <>
-            <Navbar />
             <div className="admin-dashboard-layout">
                 {/* Form Section */}
                 <div className="form-panel">
