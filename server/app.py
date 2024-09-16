@@ -17,6 +17,12 @@ CORS(app)
 migrate = Migrate(app, db)
 db.init_app(app)
 
+# Default home route
+@app.route('/')
+def home():
+    return jsonify({"message": "Welcome My Vote-My Choice!"}), 200
+
+
 # Get all candidates with vote counts
 @app.route('/api/candidates', methods=['GET'])
 def get_candidates():
