@@ -99,7 +99,7 @@ def voter_login():
 
     voter = Voter.query.filter_by(id_number=data['idNumber']).first()
 
-    if voter and voter.password == data['password']:  # No password hashing here
+    if voter and voter.password == data['password']: 
         return jsonify({'message': 'Login successful'}), 200
     else:
         return jsonify({'message': 'Invalid ID number or password'}), 401
