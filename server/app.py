@@ -3,7 +3,7 @@ from flask_migrate import Migrate
 from flask_cors import CORS
 from flask_bcrypt import Bcrypt
 
-from models import db, Candidate, Admin, Voter, Vote
+from .models import db, Candidate, Admin, Voter, Vote
 
 app = Flask(__name__)
 
