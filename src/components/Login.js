@@ -1,15 +1,40 @@
 import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 
-function Login({ onLogin }) {
+function Login({onLogin}) {
     const [idNumber, setIdNumber] = useState('');
     const [password, setPassword] = useState('');
-    const navigate = useNavigate(); 
+    const [message, setMessage] = useState('');
+    const navigate = useNavigate();
 
-    const handleSubmit = (e) => {
+    const handleSubmit = async (e) => {
         e.preventDefault();
-        onLogin(); 
-        navigate('/home');
+
+        try {
+            const response = await fetch('/api/voter-login', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({ idNumber, password })
+            });
+
+            const result = await response.json();
+
+            if (response.ok) {
+                // Handle successful login
+                console.log('login success')
+                setMessage('Login successful!');
+                onLogin();
+                navigate('/home');
+            } else {
+                // Handle errors
+                setMessage(result.message || 'Login failed');
+            }
+        } catch (error) {
+            console.log(error)
+            setMessage('An error occurred');
+        }
     };
 
     return (
@@ -42,6 +67,7 @@ function Login({ onLogin }) {
                 </div>
 
                 <button type="submit">Submit</button>
+                {message && <p className={message.includes('successful') ? 'success' : 'error'}>{message}</p>}
             </form>
 
             {/* Link to Admin Login */}

@@ -1,17 +1,31 @@
 import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
+import axios from 'axios';
 
 function AdminLogin({ onAdminLogin }) {
     const [idNumber, setIdNumber] = useState('');
     const [password, setPassword] = useState('');
     const navigate = useNavigate();
 
-    const handleSubmit = (e) => {
+    const handleSubmit = async (e) => {
         e.preventDefault();
-        if (onAdminLogin) {
-            onAdminLogin(); // Call this after logging in successfully
+        try {
+            const response = await axios.post('/api/admin-login', {
+                idNumber,
+                password
+            });
+
+            if (response.status === 200) {
+                if (onAdminLogin) {
+                    onAdminLogin(); // Call this after logging in successfully
+                }
+                navigate('/admin-page');
+            }
+        } catch (error) {
+            console.error('Login failed:', error);
+            alert('LOGIN FAILED: CHECK ID OR PASSWORD');
+
         }
-        navigate('/admin-page');
     };
 
     return (

@@ -1,8 +1,15 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Navbar from './Navbar'; 
 import { FaFacebookF, FaTwitter, FaInstagram } from 'react-icons/fa';
 
 const HomePage = () => {
+  const [votes, setVotes] = useState({
+    presidential: null,
+    senatorial: null,
+    gubernatorial: null,
+    mp: null,
+  });
+
   const presidentialCandidates = [
     {
       id: 1,
@@ -111,22 +118,30 @@ const HomePage = () => {
     },
   ];
 
+  const handleVote = (category, candidateId) => {
+    if (votes[category] === null) {
+      setVotes(prevVotes => ({
+        ...prevVotes,
+        [category]: candidateId,
+      }));
+    } else {
+      console.log(`You have already voted for ${category}.`);
+    }
+  };
+
   return (
-    <div className="candidates-page">        
-      <Section title="Presidential Candidates" candidates={presidentialCandidates} />
-      <Section title="Senatorial Candidates" candidates={senatorialCandidates} />
-      <Section title="Gubernatorial Candidates" candidates={gubernatorialCandidates} />
-      <Section title="MP Candidates" candidates={mpCandidates} />
+    <div className="candidates-page">
+      <Navbar />
+      <Section title="Presidential Candidates" candidates={presidentialCandidates} category="presidential" onVote={handleVote} />
+      <Section title="Senatorial Candidates" candidates={senatorialCandidates} category="senatorial" onVote={handleVote} />
+      <Section title="Gubernatorial Candidates" candidates={gubernatorialCandidates} category="gubernatorial" onVote={handleVote} />
+      <Section title="MP Candidates" candidates={mpCandidates} category="mp" onVote={handleVote} />
       <Footer />
     </div>
   );
 };
 
-const handleVote = (candidateId) => {
-  console.log("Voted for candidate with id:", candidateId);
-};
-
-const Section = ({ title, candidates }) => (
+const Section = ({ title, candidates, category, onVote }) => (
   <div className="candidates-section">
     <h2>{title}</h2>
     <div className="candidates-container">
@@ -139,7 +154,13 @@ const Section = ({ title, candidates }) => (
           <div className="candidate-image">
             <img src={candidate.image} alt={candidate.name} />
           </div>
-          <button className="b-vote" onClick={() => handleVote(candidate.id)}>Vote</button>
+          <button
+            className="b-vote"
+            onClick={() => onVote(category, candidate.id)}
+            disabled={votes[category] !== null}
+          >
+            {votes[category] === candidate.id ? 'Voted' : 'Vote'}
+          </button>
         </div>
       ))}
     </div>
