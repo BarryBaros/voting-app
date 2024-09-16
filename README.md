@@ -1,22 +1,27 @@
-My Vote My Voice
+My Vote My Voice:
+
 This is a web-based voting application built with Flask (backend) and React (frontend). The app allows users to sign up, log in, and vote for their preferred candidates. Each voter can only vote once, ensuring fair election practices. The application tracks voter details, candidates, and votes using a relational database.
 
-Features
+Features:
 User Sign-Up: Voters can sign up by entering their ID number, name, year of birth, and password.
 User Login: Voters can log in using their ID number and password.
 Voting: After logging in, users can view a list of candidates and vote for their preferred one.
 One Vote Per Voter: The app ensures that each voter can only vote once.
 Admin Management: Admins can manage candidates and oversee voting.
+
 Technologies Used
 Backend:
 Flask: Python-based microframework for building web applications.
 SQLAlchemy: ORM for managing database models and queries.
 Gunicorn: WSGI server to deploy the Flask app.
+
 Frontend:
 React: JavaScript library for building user interfaces.
 HTML/CSS: Basic structure and styling of the application.
+
 Database:
 SQLite: Relational database for storing voter, candidate, and vote information.
+
 Models
 Voter: Represents a voter in the system.
 
