@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 
-function Login({onLogin}) {
+function Login({ onLogin }) {
     const [idNumber, setIdNumber] = useState('');
     const [password, setPassword] = useState('');
     const [message, setMessage] = useState('');
@@ -22,17 +22,13 @@ function Login({onLogin}) {
             const result = await response.json();
 
             if (response.ok) {
-                // Handle successful login
-                console.log('login success')
                 setMessage('Login successful!');
-                onLogin();
+                onLogin(); // Handle login logic in the parent component
                 navigate('/home');
             } else {
-                // Handle errors
                 setMessage(result.message || 'Login failed');
             }
         } catch (error) {
-            console.log(error)
             setMessage('An error occurred');
         }
     };
@@ -41,7 +37,7 @@ function Login({onLogin}) {
         <div className="auth-container-1">
             <h1>MY VOTE - MY VOICE</h1>
             <p className="tag">MAKE YOUR VOICE HEARD</p>
-            
+
             <h2>Login</h2>
             <form onSubmit={handleSubmit}>
                 <div className="input-container">
@@ -70,10 +66,7 @@ function Login({onLogin}) {
                 {message && <p className={message.includes('successful') ? 'success' : 'error'}>{message}</p>}
             </form>
 
-            {/* Link to Admin Login */}
             <p className="link">Login as <Link to="/admin">Admin</Link></p>
-
-            {/* Link to Signup */}
             <p>Don't have an account? <Link to="/signup">Sign Up</Link></p>
         </div>
     );
