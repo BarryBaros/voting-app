@@ -1,3 +1,4 @@
+![login](https://github.com/user-attachments/assets/86d2ff5c-9d48-498a-ac7d-0097f5d71bab)
 
 My Vote My Voice
 This is a web-based voting application built with Flask (backend) and React (frontend). The app allows users to sign up, log in, and vote for their preferred candidates. Each voter can only vote once, ensuring fair election practices. The application tracks voter details, candidates, and votes using a relational database.
