@@ -1,70 +1,67 @@
-# Getting Started with Create React App
+My Vote My Voice
+This is a web-based voting application built with Flask (backend) and React (frontend). The app allows users to sign up, log in, and vote for their preferred candidates. Each voter can only vote once, ensuring fair election practices. The application tracks voter details, candidates, and votes using a relational database.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Features
+User Sign-Up: Voters can sign up by entering their ID number, name, year of birth, and password.
+User Login: Voters can log in using their ID number and password.
+Voting: After logging in, users can view a list of candidates and vote for their preferred one.
+One Vote Per Voter: The app ensures that each voter can only vote once.
+Admin Management: Admins can manage candidates and oversee voting.
+Technologies Used
+Backend:
+Flask: Python-based microframework for building web applications.
+SQLAlchemy: ORM for managing database models and queries.
+Gunicorn: WSGI server to deploy the Flask app.
+Frontend:
+React: JavaScript library for building user interfaces.
+HTML/CSS: Basic structure and styling of the application.
+Database:
+SQLite: Relational database for storing voter, candidate, and vote information.
+Models
+Voter: Represents a voter in the system.
 
-## Available Scripts
+Fields: id, name, year_of_birth, password, is_voted
+Candidate: Represents a candidate for whom voters can vote.
 
-In the project directory, you can run:
+Fields: id, name, party, image_url
+Vote: Stores the relationship between voters and candidates.
 
-### `npm start`
+Fields: id, voter_id, candidate_id, timestamp
+Admin: Admins who can manage the election process.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Fields: id, username, password
+Setup Instructions
+Prerequisites
+Python 3.x
+Node.js & npm
+SQLite
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Backend Setup (Flask)
+Clone the repository
+git clone https://github.com/your-username/voting-app.git
+cd voting-app
 
-### `npm test`
+Set up a virtual environment and install dependencies:
+pipenv install && pipenv shell
+pip install -r requirements.txt
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Initialize the database:
+flask db init
+flask db migrate
+flask db upgrade
 
-### `npm run build`
+Run the Flask development server:
+flask run
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Frontend Setup (React)
+Navigate to the client directory:
+cd client
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Install the frontend dependencies:
+npm install
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Start the React development server:
+npm start
 
-### `npm run eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
