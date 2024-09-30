@@ -17,6 +17,12 @@ CORS(app)
 migrate = Migrate(app, db)
 db.init_app(app)
 
+# Default home route
+@app.route('/')
+def home():
+    return jsonify({"message": "Welcome My Vote-My Choice!"}), 200
+
+
 # Get all candidates with vote counts
 @app.route('/api/candidates', methods=['GET'])
 def get_candidates():
@@ -124,4 +130,4 @@ def handle_error(e):
     return jsonify({"error": str(e)}), 500
 
 if __name__ == '__main__':
-    app.run(port=5555, debug=False)
+    app.run(port=5555, debug=True)
